@@ -13,6 +13,11 @@
             margin-right: 20px;
             font-size: 1.2rem;
         }
+        .carousel-item img {
+            height: 70vh;
+            width: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +32,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item ">
+                <li class="nav-item">
                     <a class="nav-link text-light" href="index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -59,28 +64,28 @@
     </nav>
 
     <!-- Landing Page / Home Section -->
-    <section id="home" class="mt-0 pt-1" >
-        <div id="carouselExampleIndicators" class="carousel slide mx-5" data-ride="carousel" >
+    <section id="home" class="mt-0 pt-1">
+        <div id="carouselExampleIndicators" class="carousel slide mx-5" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active" >
-                    <img src="images/slide1.jpg" class="d-block w-80 mx-auto" alt="Slide 1" style="height: 70vh; width: 80vw; border-radius: 25px;">
-                    <div class="carousel-caption d-none d-md-block text-dark"> 
+                <div class="carousel-item active">
+                    <img src="images/slide1.jpg" class="d-block w-100 mx-auto" alt="Slide 1">
+                    <div class="carousel-caption d-none d-md-block text-dark">
                         <h1 style="background-color: beige; opacity: 0.8; border-radius: 40px; padding: 10px;">Let us make a change</h1>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/slide2.jpg" class="d-block w-80 mx-auto" alt="Slide 2" style="height: 70vh; width: 80vw; border-radius: 25px;">
-                    <div class="carousel-caption d-none d-md-block text-dark" >
+                    <img src="images/slide2.jpg" class="d-block w-100 mx-auto" alt="Slide 2">
+                    <div class="carousel-caption d-none d-md-block text-dark">
                         <h1 style="background-color: beige; opacity: 0.8; border-radius: 40px; padding: 10px;">Making a Difference</h1>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/slide3.jpg" class="d-block w-80 mx-auto" alt="Slide 3" style="height: 70vh; width: 80vw; border-radius: 25px;">
+                    <img src="images/slide3.jpg" class="d-block w-100 mx-auto" alt="Slide 3">
                     <div class="carousel-caption d-none d-md-block text-dark">
                         <h1 style="background-color: beige; opacity: 0.8; border-radius: 40px; padding: 10px;">Join Us Today</h1>
                     </div>
@@ -107,99 +112,93 @@
     </section>
 
     <section id="projects">
-        <div class="text-center card container bg-light rounded-5 shadow mt-5 mb-3" style="width: 80vw; margin: auto;"><h2>Areas of operation</h2>  </div>
+        <div class="text-center card container bg-light rounded-5 shadow mt-5 mb-3" style="width: 80vw; margin: auto;">
+            <h2>Areas of Operation</h2>
+        </div>
         <!-- Projects Section -->
-        <div class="container d-flex justify-content-center" >
-            <div id="projectCard-1" class="card mx-auto rounded-5" style="width: 25vw;">
-                <div class="card-header text-center bg-success">
-                    <h5 class="text-light m-0 py-2">Organic and Advanced Farming</h5>
-                  </div>
-                  <div class="card-body p-0 justify-content-center d-flex">
-                    <image src="images/organic_farming.jpg" class="m-1" style="width: 23vw; ">
+        <div class="container">
+            <div class="row">
+                <div id="projectCard-1" class="card col-md-4 col-sm-12 mx-auto mb-3">
+                    <div class="card-header text-center bg-success">
+                        <h5 class="text-light m-0 py-2">Organic and Advanced Farming</h5>
+                    </div>
+                    <div class="card-body p-0 justify-content-center d-flex">
+                        <img src="images/organic_farming.jpg" class="m-1" style="width: 100%;">
+                    </div>
                 </div>
-            </div>
 
-            <div id="projectCard-2" class="card mx-auto" style="width: 30vw;">
-                <div class="card-header text-center bg-primary">
-                    <h5 class="text-light m-0">Women Empowerment and Nutrition Security</h5>
+                <div id="projectCard-2" class="card col-md-4 col-sm-12 mx-auto mb-3">
+                    <div class="card-header text-center bg-primary">
+                        <h5 class="text-light m-0">Women Empowerment and Nutrition Security</h5>
+                    </div>
+                    <div class="card-body p-0 justify-content-center d-flex">
+                        <img src="images/women_impowerment.jpeg" class="m-1" style="width: 100%;">
+                    </div>
                 </div>
-                <div class="card-body p-0 justify-content-center d-flex">
-                    <image src="images/women_impowerment.jpeg" class="m-1" style="width:29vw;">
+
+                <div id="projectCard-3" class="card col-md-4 col-sm-12 mx-auto mb-3">
+                    <div class="card-header text-center bg-warning">
+                        <h5 class="text-dark m-0">Conservation of Wild Water Bodies</h5>
+                    </div>
+                    <div class="card-body p-0 justify-content-center d-flex">
+                        <img src="images/water_conservation.jpeg" class="m-1" style="width: 100%;">
+                    </div>
                 </div>
-            </div>
-            <div id="projectCard-3" class="card mx-auto" style="width: 25vw;">
-                <div class="card-header text-center bg-warning" >
-                    <h5 class="text-dark m-0">Conservation of Wild Water Bodies</h5>
-                  </div>
-                  <div class="card-body p-0 justify-content-center d-flex">
-                    <image src="images/water_conservation.jpeg" class="m-1" style="width: 23vw; ">
-                </div>
-                  
             </div>
         </div>
     </section>
     <hr>
 
     <section>
-        <div class="container d-flex flex-row mt-5">
-            <div style="border-right: 1px solid black ; width: 25vw" class="bg-info rounded">
-                <div  class="d-flex justify-content-center align-items-center">
-                    <img src="images/SOIL Foundation Logo.jpg" alt="NGO Logo" style="width: 10vw; border-radius: 10%;" class="p-1">
-                    <h4 class="text-center text-light mr-1 ml-1">SOIL  Foundation</h4>
-                    
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-4 col-sm-12 bg-info rounded mb-3">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="images/SOIL Foundation Logo.jpg" alt="NGO Logo" style="width: 10vw; border-radius: 10%;" class="p-1">
+                        <h4 class="text-center text-light mr-1 ml-1">SOIL Foundation</h4>
+                    </div>
+                    <address class="px-3 text-left pt-3">
+                        <strong>Registered Office:</strong>
+                        SOIL Foundation, #63, C/o Narayan Hegde, Shirasagaon(V), Kakkalli (P), Sirsi taluk, Uttarkannada, -582336, Karnataka, India
+                    </address>
+                    <address class="px-3 text-left pt-3">
+                        <strong>Corporate Office:</strong>
+                        SOIL Foundation, #600/1, 8th Link Road, Alanahalli Layout, Mysore-570028, Karnataka, India
+                    </address>
                 </div>
-                <address class="px-3 text-left pt-3">
-                    <strong>Registerd Office:</strong>
-                    SOIL Foundation, #63, C/o Narayan Hegde, Shirasagaon(V), Kakkalli (P), Sirsi taluk, Uttarkannada, -582336  ,Karnataka, India
-                </address>
-                <address class="px-3 text-left pt-3">
-                    <strong>Corporate Office:</strong>
-                    SOIL Foundation, #600/1, 8th Link Road, Alanahalli Layout, Mysore-570028, Karnataka, India
-                </address>
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7720.850318841359!2d74.84165592770688!3d14.631790831911095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s%5CShirasagaon(V)%2C%20Kakkalli%20(P)%2C%20Sirsi%20taluk%2C%20Uttarkannada%2C%20-582336%20%2CKarnataka%2C%20India!5e0!3m2!1sen!2sin!4v1718908311971!5m2!1sen!2sin" style="width: 49vw;" height="200vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="border p-1"></iframe> -->
-            </div>
-            <div style="border-right: 1px solid black ; width: 25vw">
-                <div  class="d-flex justify-content-center align-items-center">
-                    
-                    <h4 class="d-flex mr-3 justify-content-center align-items-center" style="height: 10vh; text-align: justify-all;">Explore</h4>
-                    
-                </div>
-                <div class="p-3 bg-dark mx-1">
-                    <ul class="list-unstyled m-0 p-0">
+                <div class="col-md-4 col-sm-12 bg-dark text-light mb-3">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h4 class="d-flex justify-content-center align-items-center" style="height: 10vh;">Explore</h4>
+                    </div>
+                    <ul class="list-unstyled p-3">
                         <li class="nav-item"><a class="nav-link text-light" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="our-work.html">Our Work</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-            </div>
-            
-            <div style=" width: 35vw">
-                <div  class="d-flex justify-content-center align-items-center">
-                    
-                    <h4 class="d-flex mr-3 justify-content-center align-items-center" style="height: 10vh; text-align: justify-all;">Contact Us</h4>
-                    
-                </div>
-                <div class="p-3 bg-light mx-1">
-                    <form>
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Your Message</label>
-                          <input type="text" class="form-control" id="exampleInputPassword1">
-                        </div>
-    
-                        <button type="submit" class="btn btn-primary mx-auto">Submit</button>
-                    </form>
+                <div class="col-md-4 col-sm-12 bg-light mb-3">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h4 class="d-flex justify-content-center align-items-center" style="height: 10vh;">Contact Us</h4>
+                    </div>
+                    <div class="p-3">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Your Message</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary mx-auto">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-
         </div>
-
     </section>
     <footer>
-        <p class="text-center bg-dark text-light py-3 mt-1 mb-0">Copyright © 2024 |  SOIL Foundation | All rights reserved.</p>
+        <p class="text-center bg-dark text-light py-3 mt-1 mb-0">Copyright © 2024 | SOIL Foundation | All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
@@ -209,4 +208,3 @@
     <script src="functionality.js"></script>
 </body>
 </html>
-

@@ -1,38 +1,168 @@
-.App {
+/* =====================================================================
+   Global Styles
+===================================================================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* =====================================================================
+   Background Colors for Navbar, Footer, Vision, Mission sections
+===================================================================== */
+.bg-light-green {
+  background-color: #CDD8B7 !important;
+}
+
+/* =====================================================================
+   Section Headings
+===================================================================== */
+.section-heading {
+  color: #496907;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* =====================================================================
+   Button Styles - .btn-custom
+   Using !important to override Bootstrap defaults
+===================================================================== */
+/* Button styling */
+.btn-custom {
+  background-color: rgba(128, 147, 90, 0.7)!important; /* Original background color */
+  color: #000 !important;              /* Original text color */
+  font-weight: bold !important;
+  border: none;
+  border-radius: 40px !important;
+  transition: all 0.2s ease;
+}
+
+/* Hover and Focus state */
+.btn-custom:hover,
+.btn-custom:focus {
+  background-color: #496907 !important; /* Lighter, faint background */
+  color: #fff !important;                                 /* Text becomes black */
+  font-weight: bold;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* =====================================================================
+   Footer Styling
+===================================================================== */
+.footer-container {
+  background-color: #CDD8B7;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Footer Logo */
+.footer-left img {
+  width: 80px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Footer Headings ("Follow Us On" and "Contact Us") */
+.footer-heading {
+  font-size: 25px;  /* Adjust if needed */
+  font-weight: 700;
+  color: #000;      /* Or use #496907 if preferred */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Footer Bottom Text */
+.footer-bottom-text {
+  margin: 0;
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+.footer-bottom-text a:hover {
+  font-weight: bold;
+  color: #000 !important;
+}
+
+
+/* =====================================================================
+   Featured Container for Inline Boxes
+===================================================================== */
+.featured-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+/* =====================================================================
+   Director Card Styling (Board of Directors)
+===================================================================== */
+.director-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #4869078f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Director Photo */
+.director-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  float: left;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+/* =====================================================================
+   About Us Cards (Vision, Mission)
+===================================================================== */
+.about-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+/* =====================================================================
+   Team Description Box
+===================================================================== */
+.team-desc {
+  padding: 20px;
+  width: 700px;
+  height: 150px;
+  background-color: #4869078f;
+}
+
+/* =====================================================================
+   Work Section Layout (Alternate Layout)
+===================================================================== */
+.work-section {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;   /* Spacing between sections */
+  gap: 20px;        /* Space between text and image */
+}
+
+/* Reverse layout for even-numbered work sections */
+.work-section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Consistent styling for images in work section */
+.work-section img {
+  width: 300px;     /* Adjust as needed */
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Text container inside work section for consistent padding */
+.text-container {
+  flex: 1;
+  padding: 0 20px;
 }

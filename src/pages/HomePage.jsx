@@ -121,7 +121,7 @@ function HomePage() {
           <div style={{ textAlign: 'center' }}>
             <img
               /*src={Img path}*/
-              alt="Organic Farming"
+              alt="Education and Enterprise Development"
               style={{ width: '300px', height: '350px' }}
             />
             <p
@@ -157,7 +157,7 @@ function HomePage() {
           <div style={{ textAlign: 'center' }}>
             <img
               /*src={Img path}*/
-              alt="Conservation of Water Bodies"
+              alt="Environment and Ecology"
               style={{ width: '300px', height: '350px' }}
             />
             <p

@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman, Noto serif devnagri';
 }
 
 /* =====================================================================
@@ -87,7 +87,6 @@ body {
   color: #000 !important;
 }
 
-
 /* =====================================================================
    Featured Container for Inline Boxes
 ===================================================================== */
@@ -134,8 +133,9 @@ body {
 ===================================================================== */
 .team-desc {
   padding: 20px;
-  width: 700px;
-  height: 150px;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
   background-color: #4869078f;
 }
 
@@ -156,7 +156,8 @@ body {
 
 /* Consistent styling for images in work section */
 .work-section img {
-  width: 300px;     /* Adjust as needed */
+  width: 100%;
+  max-width: 300px;     /* Adjust as needed */
   height: auto;
   border-radius: 5px;
 }
@@ -165,4 +166,116 @@ body {
 .text-container {
   flex: 1;
   padding: 0 20px;
+}
+
+/* =====================================================================
+   Hero Section
+===================================================================== */
+.hero-section {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: revert;
+}
+
+.hero-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Times new roman', 'Noto serif devnagri';
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.hero-subtitle {
+  color: #496907;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* =====================================================================
+   Content Section
+===================================================================== */
+.content-section {
+  font-family: 'Times new roman', 'Noto serif devnagri';
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.section-paragraph {
+  text-align: justify;
+}
+
+.highlight-text {
+  font-size: 1.2rem;
+  font-family: 'Times new roman', 'Noto serif devnagri';
+  text-align: center;
+  font-style: italic;
+  color: #496907;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+/* =====================================================================
+   Programmes Section
+===================================================================== */
+.programmes-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.programme-box {
+  text-align: center;
+  text-decoration: none;
+}
+
+.programme-image {
+  width: 100%;
+  height: auto;
+}
+
+.programme-title {
+  font-weight: bold;
+  color: #496907;
+  font-size: 1.2rem;
+}
+
+/* =====================================================================
+   Media Queries for Responsiveness
+===================================================================== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .programme-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .team-desc {
+    width: 100%;
+    height: auto;
+  }
 }

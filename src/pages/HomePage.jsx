@@ -1,7 +1,10 @@
-// src/pages/HomePage.jsx
 import React from 'react';
-import bannerImage from '../assets/banner.jpg'; // Replace with your own banner image
-
+import { Container, Row, Col } from 'react-bootstrap';
+import bannerImage from '../assets/WesternGhat.jpg';
+import Education from '../images/1.png';
+import WomenEmpowerment from '../images/3.png';
+import Environment from '../images/4.png';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 function HomePage() {
   return (
@@ -15,19 +18,19 @@ function HomePage() {
             width: '100%',
             height: 'auto',
             maxHeight: '500px',
-            objectFit: 'cover',
+            objectFit: 'revert',
           }}
         />
         {/* Container for the overlay text */}
         <div
           style={{
             position: 'absolute',
-            top: '10%',             // Position text near top
+            top: '10%', // Position text near top
             left: '50%',
-            transform: 'translateX(-50%)', 
+            transform: 'translateX(-50%)',
             textAlign: 'center',
             color: '#fff',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.8)', // Subtle shadow for readability
+            fontFamily: 'Times new roman, Noto serif devnagri',
           }}
         >
           {/* Main Title */}
@@ -55,14 +58,24 @@ function HomePage() {
       </div>
 
       {/* Western Ghats Section */}
-      <div style={{ margin: '40px auto', maxWidth: '800px' }}>
+      <Container className="py-4" style={{ maxWidth: '800px' }}>
         <h2
-          className="section-heading"
-          style={{ textAlign: 'center', fontSize: '1.9rem', fontWeight: '900' }}
+          className="text-center"
+          style={{
+            fontFamily: 'Times new roman, Noto serif devnagri',
+            fontSize: '1.9rem',
+            fontWeight: '900',
+            color: '#496907'
+          }}
         >
-          Western Ghats : The Green Jewel Of India 🌿🏔️
+          Western Ghats : The Green Jewel Of India
         </h2>
-        <p>
+        <p
+          style={{
+            fontFamily: 'Times new roman, Noto serif devnagri',
+            textAlign: 'justify',
+          }}
+        >
           The Western Ghats, a UNESCO World Heritage Site and a mesmerizing and critically
           important biodiversity hotspot, is a guardian of ecological and environmental
           balance in India. Stretching approximately 1,600 kilometers across Maharashtra,
@@ -72,106 +85,130 @@ function HomePage() {
           Narmada, Tapti, Godavari, Krishna, and Kaveri that carve their way through rugged
           terrain nourishing life and land.
         </p>
-      </div>
+      </Container>
 
       {/* Challenges Faced by Western Ghats */}
-      <div style={{ margin: '40px auto', maxWidth: '800px' }}>
+      <Container className="py-4" style={{ maxWidth: '800px' }}>
         <h2
-          className="section-heading"
-          style={{ textAlign: 'center', fontSize: '1.9rem', fontWeight: '900' }}
+          className="text-center"
+          style={{
+            fontFamily: 'Times new roman, Noto serif devnagri',
+            fontSize: '1.9rem',
+            fontWeight: '900',
+            color: '#496907'
+          }}
         >
           Challenges Faced By Western Ghats
         </h2>
-        <p>
+        <p
+          style={{
+            fontFamily: 'Times new roman, Noto serif devnagri',
+            textAlign: 'justify',
+          }}
+        >
           The Western Ghats are under critical strain. Deforestation, mining, and encroachment,
           unscientific forest product collection coupled with poor resource management, are
           rapidly eroding this vital ecosystem. This results in habitat loss, alarming biodiversity
           decline, and crippling water scarcity, directly impacting the livelihoods of local
           communities.
         </p>
-      </div>
+      </Container>
 
-      <div style={{ color: '#496907', margin: '40px auto', maxWidth: '800px' }}>
-        <strong>
+      <Container className="py-4 text-center" style={{ maxWidth: '800px' }}>
+        <strong
+          style={{
+            fontSize: '1.2rem',
+            fontFamily: 'Times new roman, Noto serif devnagri',
+            fontStyle: 'italic',
+            color: '#496907',
+          }}
+        >
           Recognizing the Western Ghats' vital ecological role, SOIL Foundation dedicates itself
           to its protection through sustainable and conservation-focused programs.
         </strong>
-      </div>
+      </Container>
 
       {/* Three Featured Images (Programmes) */}
-      <div style={{ margin: '40px auto', maxWidth: '800px' }}>
+      <Container className="py-4" style={{ maxWidth: '800px' }}>
         {/* Centered Heading */}
         <h2
-          className="section-heading"
-          style={{ textAlign: 'center', fontSize: '1.9rem', fontWeight: '900' }}
+          className="text-center"
+          style={{
+            fontFamily: 'Times new roman, Noto serif devnagri',
+            fontSize: '1.9rem',
+            fontWeight: '900',
+            color: '#496907'
+          }}
         >
           Programmes
         </h2>
 
         {/* Container for the 3 images in a row */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '30px',
-            marginTop: '20px',
-          }}
-        >
-          {/* 1st Box */}
-          <div style={{ textAlign: 'center' }}>
-            <img
-              /*src={Img path}*/
-              alt="Education and Enterprise Development"
-              style={{ width: '300px', height: '350px' }}
-            />
+        <Row className="d-flex justify-content-center">
+          <Col md={4} className="text-center mb-4">
+            {/* 1st Box */}
+            <div>
+              <img
+                src={Education}
+                alt="Education and Enterprise Development"
+                className="img-fluid"
+              />
+            </div>
             <p
               style={{
-                marginTop: '10px',
                 fontWeight: 'bold',
                 color: '#496907',
+                fontSize: '1.2rem',
+                fontFamily: 'Times new roman, Noto serif devnagri',
               }}
             >
               Education and Enterprise Development
             </p>
-          </div>
+          </Col>
 
           {/* 2nd Box */}
-          <div style={{ textAlign: 'center' }}>
-            <img
-              /*src={Img path}*/
-              alt="Women Empowerment"
-              style={{ width: '300px', height: '350px' }}
-            />
+          <Col md={4} className="text-center mb-4">
+            <div>
+              <img
+                src={WomenEmpowerment}
+                alt="Women Empowerment"
+                className="img-fluid"
+              />
+            </div>
             <p
               style={{
-                marginTop: '10px',
                 fontWeight: 'bold',
                 color: '#496907',
+                fontSize: '1.2rem',
+                fontFamily: 'Times new roman, Noto serif devnagri',
               }}
             >
               Women Empowerment & Nutrition Security
             </p>
-          </div>
+          </Col>
 
           {/* 3rd Box */}
-          <div style={{ textAlign: 'center' }}>
-            <img
-              /*src={Img path}*/
-              alt="Environment and Ecology"
-              style={{ width: '300px', height: '350px' }}
-            />
+          <Col md={4} className="text-center mb-4">
+            <div>
+              <img
+                src={Environment}
+                alt="Environment and Ecology"
+                className="img-fluid"
+              />
+            </div>
             <p
               style={{
-                marginTop: '10px',
                 fontWeight: 'bold',
                 color: '#496907',
+                fontSize: '1.2rem',
+                fontFamily: 'Times new roman, Noto serif devnagri',
               }}
             >
               Environment and Ecology
             </p>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

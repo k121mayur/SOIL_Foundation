@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import bannerImage from '../assets/WesternGhat.jpg';
-import Education from '../images/1.png';
+import Education from '../images/1.2.png';
 import WomenEmpowerment from '../images/3.png';
 import Environment from '../images/4.png';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
@@ -47,9 +47,10 @@ function HomePage() {
           {/* Subtitle */}
           <h2
             style={{
-              color: '#00534A',
+              color: '#ffd203',
               fontSize: '1.5rem',
               fontWeight: 'bold',
+              //backgroundColor: 'rgb(88, 161, 179)'
             }}
           >
             Join us in Creating Sustainable Change!!!
@@ -149,8 +150,8 @@ function HomePage() {
             {/* 1st Box */}
             <div>
               <img
-                src={Education}
-                alt="Education and Enterprise Development"
+                src={Environment}
+                alt="Environment and Ecology"
                 className="img-fluid"
               />
             </div>
@@ -162,7 +163,7 @@ function HomePage() {
                 fontFamily: 'Times new roman, Noto serif devnagri',
               }}
             >
-              Education and Enterprise Development
+              Environment and Ecology
             </p>
           </Col>
 
@@ -189,23 +190,23 @@ function HomePage() {
 
           {/* 3rd Box */}
           <Col md={4} className="text-center mb-4">
-            <div>
-              <img
-                src={Environment}
-                alt="Environment and Ecology"
-                className="img-fluid"
-              />
-            </div>
-            <p
-              style={{
-                fontWeight: 'bold',
-                color: '#496907',
-                fontSize: '1.2rem',
-                fontFamily: 'Times new roman, Noto serif devnagri',
-              }}
-            >
-              Environment and Ecology
-            </p>
+              <div>
+                <img
+                  src={Education}
+                  alt="Education and Enterprise Development"
+                  className="img-fluid"
+                />
+              </div>
+              <p
+                style={{
+                  fontWeight: 'bold',
+                  color: '#496907',
+                  fontSize: '1.2rem',
+                  fontFamily: 'Times new roman, Noto serif devnagri',
+                }}
+              >
+                Education and Enterprise Development
+              </p>
           </Col>
         </Row>
       </Container>

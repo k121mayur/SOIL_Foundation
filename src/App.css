@@ -279,3 +279,9 @@ body {
     height: auto;
   }
 }
+
+/* Maintain the respective margin while redirecting to
+respective section*/
+section {
+  scroll-margin-top: 150px;
+}

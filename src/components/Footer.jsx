@@ -23,7 +23,7 @@ function Footer() {
           <Col md={4} className="mb-4 text-center">
             <h5 className="footer-heading">Contact Us</h5>
             <p className="small">
-              <strong>Registered Office Address:</strong> SOIL Foundation, #63, C/o Narayan Hegde, Shirasagaon(V),<br />
+              <strong>Registered Office Address:</strong> SOIL Foundation, #63, Shirasagaon(V),<br />
               Kakkalli (P), Sirsi, Uttarkannada, 582336<br />
               <strong>Corporate Office Address:</strong> SOIL Foundation, #600/1, 8th Link Road, Alanahalli Layout, Mysore, 570028 <br />
               <strong>Contact:</strong> 8309221660 / 9480556719 <br />

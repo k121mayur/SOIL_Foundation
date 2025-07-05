@@ -23,11 +23,12 @@ function Footer() {
           <Col md={4} className="mb-4 text-center">
             <h5 className="footer-heading">Contact Us</h5>
             <p className="small">
-              <strong>Registered Office Address:</strong> SOIL Foundation, #63, Shirasagaon(V),<br />
-              Kakkalli (P), Sirsi, Uttarkannada, 582336<br />
-              <strong>Corporate Office Address:</strong> SOIL Foundation, #600/1, 8th Link Road, Alanahalli Layout, Mysore, 570028 <br />
+              <strong>Registered Office Address:</strong> SOIL Foundation #63, C/o Narayan Hegde, Shirasagaon (V),<br />
+               Kakkalli (P), Sirsi Taluk, Uttara Kannada, Karnataka-582336<br />
+              <strong>Corporate Office Address:</strong> SOIL Foundation Lakshmi Krishna Nilaya, 5th Main, 3rd Cross, <br />
+              Gayatri Nagar, Banavasi Road, Sirsi-581401, Uttara Kannada, Karnataka <br />
               <strong>Contact:</strong> 8309221660 / 9480556719 <br />
-              <strong>Email:</strong> <a href="mailto:soilfoundation2019@gmail.com" className="text-dark text-decoration-none">soilfoundation2019@gmail.com</a>
+              <strong>Email:</strong> <a href="mailto:contact@soilfoundation.org.in" className="text-dark text-decoration-none">contact@soilfoundation.org.in</a>
             </p>
             <a href="/contact#opinionForm">
               <button className="btn btn-custom">Get In Touch</button>

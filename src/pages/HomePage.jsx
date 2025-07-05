@@ -53,7 +53,7 @@ function HomePage() {
               //backgroundColor: 'rgb(88, 161, 179)'
             }}
           >
-            Join us in Creating Sustainable Change!!!
+            Our Inspiration: Nurturing Nature and Empowering Communities
           </h2>
         </div>
       </div>
@@ -125,7 +125,7 @@ function HomePage() {
             color: "#496907",
           }}
         >
-          Challenges Faced By Western Ghats
+          Who we are?
         </h2>
         <p
           style={{
@@ -133,29 +133,10 @@ function HomePage() {
             textAlign: "justify",
           }}
         >
-          The Western Ghats are under critical strain. Deforestation, mining,
-          and encroachment, unscientific forest product collection coupled with
-          poor resource management, are rapidly eroding this vital ecosystem.
-          This results in habitat loss, alarming biodiversity decline, and
-          crippling water scarcity, directly impacting the livelihoods of local
-          communities.
+          SOIL Foundation is an ambitious civil society organization founded by young development professionals in 2019 under the Indian Trust Act. The foundation is compliant with 80G, 12A, Darpan and CSR-1 certifications. <a href="/about">know more</a>
         </p>
       </Container>
 
-      <Container className="py-4 text-center" style={{ maxWidth: "800px" }}>
-        <strong
-          style={{
-            fontSize: "1.2rem",
-            fontFamily: "Times new roman, Noto serif devnagri",
-            fontStyle: "italic",
-            color: "#496907",
-          }}
-        >
-          Recognizing the Western Ghats' vital ecological role, SOIL Foundation
-          dedicates itself to its protection through sustainable and
-          conservation-focused programs.
-        </strong>
-      </Container>
 
       {/* Three Featured Images (Programmes) */}
       <Container className="py-4" style={{ maxWidth: "800px" }}>
@@ -238,6 +219,30 @@ function HomePage() {
           </Col>
         </Row>
       </Container>
+
+      {/* Challenges Faced by Western Ghats */}
+      <Container className="py-4" style={{ maxWidth: "800px" }}>
+        <h2
+          className="text-center"
+          style={{
+            fontFamily: "Times new roman, Noto serif devnagri",
+            fontSize: "1.9rem",
+            fontWeight: "900",
+            color: "#496907",
+          }}
+        >
+          Explore More
+        </h2>
+        <p
+          style={{
+            fontFamily: "Times new roman, Noto serif devnagri",
+            textAlign: "justify",
+          }}
+        >
+          Discover our latest projects, success stories, and opportunities to make a difference. Together, we can nurture nature, empower communities, and shape a brighter, sustainable future. <a href="/about">know more</a>
+        </p>
+      </Container>
+
     </div>
   );
 }

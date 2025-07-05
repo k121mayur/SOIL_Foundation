@@ -217,6 +217,26 @@ function HomePage() {
               Education and Enterprise Development
             </p>
           </Col>
+          {/* 3rd Box */}
+          <Col md={4} className="text-center mb-4">
+            <div>
+              <img
+                src={Education}
+                alt="Tribal Development"
+                className="img-fluid"
+              />
+            </div>
+            <p
+              style={{
+                fontWeight: "bold",
+                color: "#496907",
+                fontSize: "1.2rem",
+                fontFamily: "Times new roman, Noto serif devnagri",
+              }}
+            >
+              Tribal Development
+            </p>
+          </Col>
         </Row>
       </Container>
 

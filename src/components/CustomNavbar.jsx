@@ -122,7 +122,6 @@ function CustomNavbar() {
             >
               <NavDropdown.Item as={HashLink} to="/work#areasOfWork">Areas of Work</NavDropdown.Item>
               <NavDropdown.Item as={HashLink} to="/work#impact">Impact</NavDropdown.Item>
-              <NavDropdown.Item as={HashLink} to="/work#objectives">Objectives</NavDropdown.Item>
             </NavDropdown>
 
             {/* Contact Us Link */}

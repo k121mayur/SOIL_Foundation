@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import bannerImage from "../assets/WesternGhat.jpg";
-import directorPhoto from "../assets/profile_icon.png";
+import directorPhoto from "../assets/vinayashree_ceo.jpg";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
 function AboutUsPage() {
@@ -353,127 +353,33 @@ function AboutUsPage() {
             className="section-heading mb-4"
             style={{ fontSize: "2rem", fontWeight: "900" }}
           >
-            Board Of Directors
+            Chief Executive Officer
           </h2>
           <hr className="mx-auto mb-4" style={{ width: "200px" }} />
 
           <Row className="justify-content-center">
-            {/* Card 1 */}
-            <Col md={8} className="mb-4">
-              <Card className="director-card mx-auto">
-                <Card.Body className="d-flex">
-                  <img
-                    src={directorPhoto}
-                    alt="Director"
-                    className="director-photo me-3"
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      borderRadius: "50%",
-                    }}
-                  />
-                  <div>
-                    <p style={{ textAlign: "justify" }}>
-                      <strong>Mr. Narayan Hegde</strong>
-                      <br />
-                      President
-                      <br />
-                      Contact: 8762456114 / 8309221660
-                      <br />
-                      Mail:{" "}
-                      <a
-                        href="mailto:nanihegde09@gmail.com"
-                        className="text-dark text-decoration-none"
-                      >
-                        nanihegde09@gmail.com
-                      </a>
-                      <br />
-                      Address: S/O Balakrishna Hegde, #63, Muski Village,
-                      Vanalli Panchayat, Tal. Sirsi, Dist. Uttara Kannada,
-                      581336
-                    </p>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
+  <Col md={8} className="mb-4">
+    <Card className="director-card mx-auto">
+      {/* Use align-items-center to vertically center items */}
+      <Card.Body className="d-flex align-items-center">
+        <img
+          src={directorPhoto}
+          alt="Director"
+          className="director-photo me-3"
+          style={{
+            width: "150px",
+            height: "150px",
+            borderRadius: "50%",
+          }}
+        />
+        <div>
+          <h4 className="mb-0 text-white">Mrs. Vinayashree Gaonkar</h4>
+        </div>
+      </Card.Body>
+    </Card>
+  </Col>
+</Row>
 
-            {/* Card 2 */}
-            <Col md={8} className="mb-4">
-              <Card className="director-card mx-auto">
-                <Card.Body className="d-flex">
-                  <img
-                    src={directorPhoto}
-                    alt="Director"
-                    className="director-photo me-3"
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      borderRadius: "50%",
-                    }}
-                  />
-                  <div>
-                    <p style={{ textAlign: "justify" }}>
-                      <strong>Mrs. Vinayashree Gaonkar</strong>
-                      <br />
-                      Secretary
-                      <br />
-                      Contact: 9480556719 / 6360284426
-                      <br />
-                      Mail:{" "}
-                      <a
-                        href="mailto:vinugaonkar96@gmail.com"
-                        className="text-dark text-decoration-none"
-                      >
-                        vinugaonkar96@gmail.com
-                      </a>
-                      <br />
-                      Address: D/O Shivaram Gaonkar, #57, Beegar, Vajralli Post,
-                      Tal. Yellapur, Dist. Uttara Kannada, 581337
-                    </p>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            {/* Card 3 */}
-            <Col md={8} className="mb-4">
-              <Card className="director-card mx-auto">
-                <Card.Body className="d-flex">
-                  <img
-                    src={directorPhoto}
-                    alt="Director"
-                    className="director-photo me-3"
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      borderRadius: "50%",
-                    }}
-                  />
-                  <div>
-                    <p style={{ textAlign: "justify" }}>
-                      <strong>Mr. Paresh Hegde</strong>
-                      <br />
-                      Treasurer
-                      <br />
-                      Contact: 7892865369
-                      <br />
-                      Mail:{" "}
-                      <a
-                        href="mailto:pareshshegde@gmail.com"
-                        className="text-dark text-decoration-none"
-                      >
-                        pareshshegde@gmail.com
-                      </a>
-                      <br />
-                      Address: S/O Sooryanarayana Hedge, #117, Belagundli,
-                      Tarehalli, Shigemane, Ummachgi Panchayat, Tal. Yellapur,
-                      Dist. Uttara Kannada, 581347
-                    </p>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
         </section>
 
         {/* Team Section */}

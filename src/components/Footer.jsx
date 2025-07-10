@@ -1,7 +1,12 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 
 function Footer() {
   return (
@@ -12,10 +17,26 @@ function Footer() {
           <Col md={4} className="mb-4 text-center text-md-start">
             <h5 className="footer-heading">Quick Links</h5>
             <ul className="list-unstyled">
-              <li><a href="/" className="text-dark text-decoration-none">Home</a></li>
-              <li><a href="/about" className="text-dark text-decoration-none">About Us</a></li>
-              <li><a href="/work" className="text-dark text-decoration-none">Our Work</a></li>
-              <li><a href="/contact" className="text-dark text-decoration-none">Contact</a></li>
+              <li>
+                <a href="/" className="text-dark text-decoration-none">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="text-dark text-decoration-none">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/work" className="text-dark text-decoration-none">
+                  Our Work
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="text-dark text-decoration-none">
+                  Contact
+                </a>
+              </li>
             </ul>
           </Col>
 
@@ -23,12 +44,22 @@ function Footer() {
           <Col md={4} className="mb-4 text-center">
             <h5 className="footer-heading">Contact Us</h5>
             <p className="small">
-              <strong>Registered Office Address:</strong> SOIL Foundation #63, C/o Narayan Hegde, Shirasagaon (V),<br />
-               Kakkalli (P), Sirsi Taluk, Uttara Kannada, Karnataka-582336<br />
-              <strong>Corporate Office Address:</strong> SOIL Foundation Lakshmi Krishna Nilaya, 5th Main, 3rd Cross, <br />
-              Gayatri Nagar, Banavasi Road, Sirsi-581401, Uttara Kannada, Karnataka <br />
-              <strong>Contact:</strong> 8309221660 / 9480556719 <br />
-              <strong>Email:</strong> <a href="mailto:contact@soilfoundation.org.in" className="text-dark text-decoration-none">contact@soilfoundation.org.in</a>
+              <strong>Registered Office Address:</strong> SOIL Foundation #63,
+              Shirasagaon (V),
+              Kakkalli (P), Sirsi Taluk, <br /> Uttara Kannada, Karnataka-582336
+              <br />
+              <strong>Corporate Office Address:</strong> SOIL Foundation Lakshmi
+              Krishna Nilaya, 5th Main, 3rd Cross, <br />
+              Gayatri Nagar, Banavasi Road, Sirsi-581401, Uttara Kannada,
+              Karnataka <br />
+              <strong>Contact:</strong> +91 9480556719 <br />
+              <strong>Email:</strong>{" "}
+              <a
+                href="mailto:contact@soilfoundation.org.in"
+                className="text-dark text-decoration-none"
+              >
+                contact@soilfoundation.org.in
+              </a>
             </p>
             <a href="/contact#opinionForm">
               <button className="btn btn-custom">Get In Touch</button>
@@ -67,7 +98,7 @@ function Footer() {
                 <span>Twitter</span>
               </a>
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/company/soil-foundation/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-dark text-decoration-none d-flex align-items-center"
@@ -83,7 +114,7 @@ function Footer() {
         <Row>
           <Col className="text-center mt-3">
             <p className="footer-bottom-text">
-              @ 2025 SOIL FOUNDATION | Developed by{' '}
+              @ 2025 SOIL FOUNDATION | Developed by{" "}
               <a
                 href="https://www.siliconmango.com"
                 target="_blank"

@@ -5,6 +5,8 @@ import Education from "../images/1.2.png";
 import WomenEmpowerment from "../images/3.png";
 import Environment from "../images/4.png";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import Education_modern from '../images/7.png';
+import tribal_developemnt from "../assets/Tribal Development.jpg";
 
 function HomePage() {
   return (
@@ -155,7 +157,7 @@ function HomePage() {
 
         {/* Container for the 3 images in a row */}
         <Row className="d-flex justify-content-center">
-          <Col md={4} className="text-center mb-4">
+          <Col md={3} className="text-center mb-4">
             {/* 1st Box */}
             <div>
               <img
@@ -177,7 +179,7 @@ function HomePage() {
           </Col>
 
           {/* 2nd Box */}
-          <Col md={4} className="text-center mb-4">
+          <Col md={3} className="text-center mb-4">
             <div>
               <img
                 src={WomenEmpowerment}
@@ -198,10 +200,10 @@ function HomePage() {
           </Col>
 
           {/* 3rd Box */}
-          <Col md={4} className="text-center mb-4">
+          <Col md={3} className="text-center mb-4">
             <div>
               <img
-                src={Education}
+                src={Education_modern}
                 alt="Education and Enterprise Development"
                 className="img-fluid"
               />
@@ -218,10 +220,10 @@ function HomePage() {
             </p>
           </Col>
           {/* 3rd Box */}
-          <Col md={4} className="text-center mb-4">
+          <Col md={3} className="text-center mb-4">
             <div>
               <img
-                src={Education}
+                src={tribal_developemnt}
                 alt="Tribal Development"
                 className="img-fluid"
               />

@@ -33,6 +33,7 @@ import artSupport from "../assets/soil_art/IMG-20250304-WA0016.jpg";
 import artCommunity from "../assets/soil_art/IMG-20250304-WA0000.jpg";
 import artResilience from "../assets/soil_art/IMG-20250304-WA0017.jpg";
 import tribalBorderArt from "../assets/tribal_border_art.png";
+import tribalStripPattern from "../assets/tribal_strip_pattern.png";
 
 import "./HomePage.css";
 
@@ -576,9 +577,24 @@ function HomePage() {
                     {/* Text Column */}
                     <div
                       className={`story-panel-text-col ${
-                        story.id === "our-story" ? "story-col-with-bottom-art" : ""
+                        story.id === "who-we-are"
+                          ? "story-col-with-top-art"
+                          : story.id === "our-story"
+                          ? "story-col-with-bottom-art"
+                          : ""
                       }`}
                     >
+                      {/* Geometric Tribal Strip Pattern flushing the top border of Who We Are */}
+                      {story.id === "who-we-are" && (
+                        <div className="story-panel-top-art flush-top-art">
+                          <img
+                            src={tribalStripPattern}
+                            alt="SOIL Folk Art Border Strip"
+                            className="story-top-art-img"
+                          />
+                        </div>
+                      )}
+
                       <div className="story-panel-text-content">
                         <h2 className="story-panel-title">
                           {story.title}

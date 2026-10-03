@@ -1,287 +1,102 @@
 /* =====================================================================
-   Global Styles
+   SOIL Foundation Global Stylesheet & Palette Alignment
+   Element              Colour
+   Main background      #F5F1E8
+   Navbar               #F5F1E8
+   Main headings        #344B38
+   Primary buttons      #344B38
+   Button hover         #697653
+   Impact section       #344B38
+   Alternate sections   #E8E2D5
+   Small highlights     #A66B4E
+   Decorative elements  #B99A76
+   Body text            #49483D
 ===================================================================== */
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman, Noto serif devnagri';
+  background-color: #F5F1E8;
+  color: #49483D;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* =====================================================================
-   Background Colors for Navbar, Footer, Vision, Mission sections
-===================================================================== */
+/* Background Color utilities aligned to new palette */
 .bg-light-green {
-  background-color: #CDD8B7 !important;
+  background-color: #F5F1E8 !important;
 }
 
-/* =====================================================================
-   Section Headings
-===================================================================== */
+.bg-alt-section {
+  background-color: #E8E2D5 !important;
+}
+
+.bg-impact-section {
+  background-color: #344B38 !important;
+  color: #F5F1E8 !important;
+}
+
+/* Headings */
 .section-heading {
-  color: #496907;
-  font-weight: bold;
-  margin-bottom: 15px;
+  color: #344B38 !important;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-/* =====================================================================
-   Button Styles - .btn-custom
-   Using !important to override Bootstrap defaults
-===================================================================== */
-/* Button styling */
+/* Legacy Button Compatibility */
 .btn-custom {
-  background-color: rgba(128, 147, 90, 0.7)!important; /* Original background color */
-  color: #000 !important;              /* Original text color */
-  font-weight: bold !important;
-  border: none;
+  background-color: #344B38 !important;
+  color: #F5F1E8 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 500 !important;
+  border: 1px solid #344B38 !important;
   border-radius: 40px !important;
-  transition: all 0.2s ease;
+  padding: 8px 24px !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Hover and Focus state */
 .btn-custom:hover,
 .btn-custom:focus {
-  background-color: #496907 !important; /* Lighter, faint background */
-  color: #fff !important;                                 /* Text becomes black */
-  font-weight: bold;
-  border: none;
-  outline: none;
-  box-shadow: none;
+  background-color: #697653 !important;
+  border-color: #697653 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(52, 75, 56, 0.3) !important;
 }
 
-/* =====================================================================
-   Footer Styling
-===================================================================== */
+/* Footer Styling */
 .footer-container {
-  background-color: #CDD8B7;
-  padding: 20px 0;
-  margin-top: 20px;
+  background-color: #344B38;
+  color: #F5F1E8;
+  padding: 40px 0 20px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(185, 154, 118, 0.3);
 }
 
-.footer-left,
-.footer-center,
-.footer-right {
-  text-align: center;
-}
-
-/* Footer Logo */
-.footer-left img {
-  width: 80px;
-  margin-bottom: 10px;
-}
-
-/* Footer Headings ("Follow Us On" and "Contact Us") */
 .footer-heading {
-  font-size: 25px;  /* Adjust if needed */
-  font-weight: 700;
-  color: #000;      /* Or use #496907 if preferred */
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #F5F1E8;
+  margin-bottom: 1rem;
 }
 
-/* Footer Bottom Text */
 .footer-bottom-text {
   margin: 0;
-  font-size: 0.9rem; /* Smaller font size */
+  font-size: 0.85rem;
+  color: rgba(245, 241, 232, 0.7);
+}
+
+.footer-bottom-text a {
+  color: #B99A76 !important;
+  transition: color 0.2s ease;
 }
 
 .footer-bottom-text a:hover {
-  font-weight: bold;
-  color: #000 !important;
+  color: #F5F1E8 !important;
 }
 
-/* =====================================================================
-   Featured Container for Inline Boxes
-===================================================================== */
-.featured-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-/* =====================================================================
-   Director Card Styling (Board of Directors)
-===================================================================== */
-.director-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 20px;
-  background-color: #4869078f;
-}
-
-/* Director Photo */
-.director-photo {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  float: left;
-  margin-right: 15px;
-  border-radius: 50%;
-}
-
-/* =====================================================================
-   About Us Cards (Vision, Mission)
-===================================================================== */
-.about-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 15px;
-  margin: 20px 0;
-}
-
-/* =====================================================================
-   Team Description Box
-===================================================================== */
-.team-desc {
-  padding: 20px;
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  background-color: #4869078f;
-}
-
-/* =====================================================================
-   Work Section Layout (Alternate Layout)
-===================================================================== */
-.work-section {
-  display: flex;
-  align-items: center;
-  margin: 40px 0;   /* Spacing between sections */
-  gap: 20px;        /* Space between text and image */
-}
-
-/* Reverse layout for even-numbered work sections */
-.work-section:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-/* Consistent styling for images in work section */
-.work-section img {
-  width: 100%;
-  max-width: 300px;     /* Adjust as needed */
-  height: auto;
-  border-radius: 5px;
-}
-
-/* Text container inside work section for consistent padding */
-.text-container {
-  flex: 1;
-  padding: 0 20px;
-}
-
-/* =====================================================================
-   Hero Section
-===================================================================== */
-.hero-section {
-  position: relative;
-}
-
-.hero-image {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: revert;
-}
-
-.hero-text {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: #fff;
-  font-family: 'Times new roman', 'Noto serif devnagri';
-}
-
-.hero-title {
-  font-size: 2.5rem;
-  font-weight: 900;
-  margin: 0;
-}
-
-.hero-subtitle {
-  color: #496907;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* =====================================================================
-   Content Section
-===================================================================== */
-.content-section {
-  font-family: 'Times new roman', 'Noto serif devnagri';
-  margin: 40px auto;
-  max-width: 800px;
-}
-
-.section-paragraph {
-  text-align: justify;
-}
-
-.highlight-text {
-  font-size: 1.2rem;
-  font-family: 'Times new roman', 'Noto serif devnagri';
-  text-align: center;
-  font-style: italic;
-  color: #496907;
-  margin: 40px auto;
-  max-width: 800px;
-}
-
-/* =====================================================================
-   Programmes Section
-===================================================================== */
-.programmes-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.programme-box {
-  text-align: center;
-  text-decoration: none;
-}
-
-.programme-image {
-  width: 100%;
-  height: auto;
-}
-
-.programme-title {
-  font-weight: bold;
-  color: #496907;
-  font-size: 1.2rem;
-}
-
-/* =====================================================================
-   Media Queries for Responsiveness
-===================================================================== */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .section-heading {
-    font-size: 1.5rem;
-  }
-
-  .programme-box {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .team-desc {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Maintain the respective margin while redirecting to
-respective section*/
+/* Section scroll offset */
 section {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 100px;
 }

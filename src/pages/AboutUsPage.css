@@ -1291,6 +1291,48 @@
   max-width: 720px;
 }
 
+/* Get Involved Banner CTA Buttons */
+.get-involved-banner .btn-soil-outline,
+.get-involved-banner .btn-soil-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: rgba(245, 241, 232, 0.08);
+  border: 1.5px solid rgba(245, 241, 232, 0.65) !important;
+  color: #F5F1E8 !important;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-full, 9999px);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.get-involved-banner .btn-soil-outline:hover,
+.get-involved-banner .btn-soil-outline-light:hover {
+  background-color: #F5F1E8 !important;
+  border-color: #F5F1E8 !important;
+  color: #344B38 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+}
+
+.get-involved-banner .btn-soil-outline svg,
+.get-involved-banner .btn-soil-outline-light svg {
+  color: #B99A76 !important;
+  transition: color 0.3s ease;
+}
+
+.get-involved-banner .btn-soil-outline:hover svg,
+.get-involved-banner .btn-soil-outline-light:hover svg {
+  color: #344B38 !important;
+}
+
 /* Responsive Overrides */
 @media (max-width: 991px) {
   .about-hero-content {

@@ -959,12 +959,7 @@ function AboutUsPage() {
 
                   <HashLink
                     to="/contact#opinionForm"
-                    className="btn-soil-outline"
-                    style={{
-                      borderColor: "rgba(245, 241, 232, 0.55)",
-                      color: "#F5F1E8",
-                      textDecoration: "none",
-                    }}
+                    className="btn-soil-outline-light"
                   >
                     <FaHandshake size={13} />
                     <span>Partner With Us</span>
@@ -972,12 +967,7 @@ function AboutUsPage() {
 
                   <HashLink
                     to="/contact#opinionForm"
-                    className="btn-soil-outline"
-                    style={{
-                      borderColor: "rgba(245, 241, 232, 0.55)",
-                      color: "#F5F1E8",
-                      textDecoration: "none",
-                    }}
+                    className="btn-soil-outline-light"
                   >
                     <FaEnvelope size={13} />
                     <span>Stay Updated</span>

@@ -125,7 +125,7 @@ p {
   justify-content: center;
   gap: 0.6rem;
   background-color: transparent;
-  color: var(--color-heading) !important;
+  color: var(--color-heading);
   font-family: var(--font-sans);
   font-weight: 500;
   font-size: 0.95rem;
@@ -142,6 +142,42 @@ p {
   background-color: var(--color-heading);
   color: var(--bg-main) !important;
   transform: translateY(-2px);
+}
+
+.btn-soil-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: rgba(245, 241, 232, 0.08);
+  color: #F5F1E8 !important;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid rgba(245, 241, 232, 0.65);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-soil-outline-light:hover {
+  background-color: #F5F1E8;
+  border-color: #F5F1E8;
+  color: var(--color-heading) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+}
+
+.btn-soil-outline-light svg {
+  color: #B99A76;
+  transition: color 0.3s ease;
+}
+
+.btn-soil-outline-light:hover svg {
+  color: var(--color-heading);
 }
 
 .btn-soil-light {

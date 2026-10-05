@@ -16,7 +16,6 @@ import {
   FaBuilding,
   FaArrowRight,
   FaExternalLinkAlt,
-  FaGraduationCap,
 } from "react-icons/fa";
 
 // Visual Asset

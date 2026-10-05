@@ -24,7 +24,6 @@ import {
 // Image Assets
 import bannerImage from "../assets/WesternGhat.jpg";
 import directorPhoto from "../assets/vinayashree_ceo.jpg";
-import tribalBorderArt from "../assets/tribal_border_art.png";
 import tribalStripPattern from "../assets/tribal_strip_pattern.png";
 import conservationImg from "../assets/conservation.jpg";
 import womenImg from "../assets/women.jpg";
@@ -843,8 +842,8 @@ function AboutUsPage() {
 
           {/* Team Section */}
           <div id="team" className="team-editorial-box">
-            <span className="eyebrow-tag">COLLECTIVE CAPACITY</span>
-            <h3 className="about-section-heading" style={{ fontSize: "clamp(2.2rem, 3.2vw, 2.9rem)" }}>
+            <span className="team-eyebrow">— COLLECTIVE CAPACITY</span>
+            <h3 className="about-section-heading team-heading">
               Team
             </h3>
             <div className="decorative-divider center" />
@@ -853,7 +852,7 @@ function AboutUsPage() {
               SOIL operates with an expert team proficient in community
               mobilization, natural resource conservation, livelihood enterprise
               development, women’s empowerment, microfinance, financial literacy,
-              human resource development, and management of Farmer’s Producers
+              human resource development, and management of Farmer's Producers
               Organizations (FPOs).
             </p>
 
@@ -896,14 +895,6 @@ function AboutUsPage() {
         </Container>
       </section>
 
-      {/* Traditional Folk Art Divider */}
-      <div className="tribal-divider-wrap" style={{ backgroundColor: "#F5F1E8" }}>
-        <img
-          src={tribalBorderArt}
-          alt="SOIL Folk Art Border"
-          className="tribal-divider-img"
-        />
-      </div>
 
       {/* ===================================================================
           8. GET INVOLVED (Strong Editorial CTA Navigation)

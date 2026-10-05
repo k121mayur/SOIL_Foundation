@@ -1135,21 +1135,68 @@
   margin-bottom: 1.5rem;
 }
 
-/* Team Narrative & Chips */
+/* Team Narrative & Chips with Painted Folk Art Background */
 .team-editorial-box {
-  background-color: #E8E2D5;
-  border-radius: 20px;
-  padding: 3.5rem 3rem;
-  border: 1px solid rgba(185, 154, 118, 0.35);
+  position: relative;
+  background-color: #f7d5c9;
+  background-image: url('../assets/team_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 22px;
+  padding: 4.8rem 3.5rem 4.2rem;
+  border: 1px solid rgba(185, 154, 118, 0.25);
   text-align: center;
+  box-shadow: 0 16px 45px -12px rgba(167, 85, 45, 0.16);
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .team-editorial-box {
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .team-editorial-box {
+    padding: 3.5rem 1.8rem 3rem;
+  }
+}
+
+.team-eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #a7552d;
+  margin-bottom: 0.4rem;
+}
+
+.team-heading {
+  font-family: 'EB Garamond', Georgia, serif !important;
+  font-size: clamp(2.6rem, 3.8vw, 3.4rem);
+  font-weight: 500;
+  color: #203828 !important;
+  line-height: 1.15;
+  margin: 0.3rem 0 0.8rem;
+}
+
+.team-editorial-box .decorative-divider.center {
+  background-color: #c5a880;
+  width: 55px;
+  height: 2px;
+  margin: 0 auto 1.8rem;
 }
 
 .team-narrative-text {
-  font-size: 1.08rem;
-  line-height: 1.85;
-  color: #49483D;
-  max-width: 860px;
-  margin: 0 auto 2.5rem;
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.12vw, 1.05rem);
+  line-height: 1.8;
+  color: #38352e;
+  max-width: 740px;
+  margin: 0 auto 2.6rem;
   text-align: center;
 }
 
@@ -1158,36 +1205,42 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .team-domain-chip {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 0.65rem 1.35rem;
-  border-radius: 999px;
-  background-color: #F5F1E8;
-  border: 1px solid rgba(185, 154, 118, 0.4);
+  padding: 0.6rem 1.35rem;
+  border-radius: 9999px;
+  background-color: #FAF5EB;
+  border: 1px solid rgba(185, 154, 118, 0.45);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 600;
-  color: #344B38;
+  color: #203828;
   transition: all 0.3s ease;
 }
 
 .team-domain-chip:hover {
-  background-color: #344B38;
-  color: #F5F1E8;
-  border-color: #344B38;
+  background-color: #203828;
+  color: #FAF5EB;
+  border-color: #203828;
   transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .team-domain-chip svg {
-  color: #A66B4E;
+  color: #a7552d;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
 }
 
 .team-domain-chip:hover svg {
-  color: #B99A76;
+  color: #CAA97E;
 }
 
 /* ---------------------------------------------------------------------

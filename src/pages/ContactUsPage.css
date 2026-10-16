@@ -821,6 +821,70 @@ textarea.soil-input {
 }
 
 /* ---------------------------------------------------------------------
+   Field Presence Showcase Card
+--------------------------------------------------------------------- */
+.contact-field-presence-card {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid rgba(185, 154, 118, 0.35);
+  box-shadow: 0 10px 28px rgba(30, 48, 35, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-field-presence-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(30, 48, 35, 0.12);
+}
+
+.contact-field-presence-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #2D3E30;
+}
+
+.contact-field-presence-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.contact-field-presence-card:hover .contact-field-presence-img {
+  transform: scale(1.04);
+}
+
+.contact-field-presence-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(22, 33, 24, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #F5F1E8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+  border: 1px solid rgba(202, 169, 126, 0.45);
+}
+
+.contact-field-presence-caption {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: #5D5C53;
+  padding: 1rem 1.25rem;
+  margin: 0;
+  background: #FAF7F2;
+}
+
+/* ---------------------------------------------------------------------
    8. RESPONSIVE MEDIA QUERIES
 --------------------------------------------------------------------- */
 @media (max-width: 991px) {

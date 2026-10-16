@@ -419,6 +419,45 @@
   transform: translateX(4px);
 }
 
+.work-initiative-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0.85rem;
+  background-color: #2D3E30;
+}
+
+.work-initiative-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.work-initiative-card:hover .work-initiative-thumb {
+  transform: scale(1.04);
+}
+
+.work-initiative-thumb-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(22, 33, 24, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #F5F1E8;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  border: 1px solid rgba(202, 169, 126, 0.4);
+}
+
 .work-initiative-title {
   font-family: var(--font-serif);
   font-size: 1.18rem;
@@ -657,6 +696,162 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.2rem;
+}
+
+/* ---------------------------------------------------------------------
+   4B. GROUNDWORK IN ACTION (Filterable Field Action Gallery - 46 Images)
+--------------------------------------------------------------------- */
+.work-field-gallery-section {
+  padding: 6.5rem 0 6rem;
+  background-color: #EFE9DC;
+  position: relative;
+  border-top: 1px solid rgba(185, 154, 118, 0.3);
+  border-bottom: 1px solid rgba(185, 154, 118, 0.3);
+}
+
+.work-field-gallery-lead {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #49483D;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.work-gallery-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.8rem;
+}
+
+.work-gallery-tab-btn {
+  padding: 0.55rem 1.35rem;
+  border-radius: 50px;
+  background: #FFFFFF;
+  border: 1px solid rgba(185, 154, 118, 0.45);
+  color: #49483D;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(52, 75, 56, 0.04);
+}
+
+.work-gallery-tab-btn:hover {
+  background: #E8E2D5;
+  border-color: #344B38;
+  color: #344B38;
+}
+
+.work-gallery-tab-btn.active {
+  background: #344B38;
+  color: #F5F1E8;
+  border-color: #344B38;
+  box-shadow: 0 6px 18px rgba(52, 75, 56, 0.22);
+}
+
+.work-gallery-card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(185, 154, 118, 0.35);
+  box-shadow: 0 10px 28px rgba(52, 75, 56, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.work-gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(52, 75, 56, 0.16);
+  border-color: #344B38;
+}
+
+.work-gallery-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #243527;
+}
+
+.work-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-gallery-card:hover .work-gallery-img {
+  transform: scale(1.06);
+}
+
+.work-gallery-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  background: rgba(22, 33, 24, 0.82);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #F5F1E8;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
+  border: 1px solid rgba(202, 169, 126, 0.4);
+}
+
+.work-gallery-zoom {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(245, 241, 232, 0.85);
+  color: #243527;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.work-gallery-card:hover .work-gallery-zoom {
+  background: #B99A76;
+  color: #162118;
+  transform: scale(1.1);
+}
+
+.work-gallery-body {
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.work-gallery-title {
+  font-family: var(--font-serif, 'EB Garamond', Georgia, serif);
+  font-size: 1.15rem;
+  color: #344B38;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+
+.work-gallery-desc {
+  font-size: 0.86rem;
+  color: #5D5C53;
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* ---------------------------------------------------------------------

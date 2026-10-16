@@ -19,9 +19,12 @@ import {
   FaAward,
   FaBriefcase,
   FaChartLine,
+  FaTimes,
+  FaExpand,
 } from "react-icons/fa";
 
 // Image Assets
+import { aboutUsClientImages } from "../assets/clientImages";
 import bannerImage from "../assets/WesternGhat.jpg";
 import directorPhoto from "../assets/vinayashree_ceo.jpg";
 import tribalStripPattern from "../assets/tribal_strip_pattern.png";
@@ -41,6 +44,7 @@ gsap.registerPlugin(ScrollTrigger);
 function AboutUsPage() {
   const mainRef = useRef(null);
   const [activeTab, setActiveTab] = useState(0);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   // GSAP Animations
   useEffect(() => {
@@ -895,6 +899,89 @@ function AboutUsPage() {
         </Container>
       </section>
 
+      {/* ===================================================================
+          7B. OUR JOURNEY IN THE FIELD (Client Fieldwork Photography)
+      =================================================================== */}
+      <section id="field-journey" className="about-field-journey-section">
+        <Container>
+          <div className="text-center mb-5">
+            <span className="eyebrow-tag">ON-GROUND IMMERSION</span>
+            <h2 className="about-section-heading">Our Journey in the Field</h2>
+            <div className="decorative-divider center" />
+            <p className="about-field-journey-lead">
+              Moments capturing our team and grassroots partners active across the villages, forests, and learning spaces of Karnataka.
+            </p>
+          </div>
+
+          <Row className="gy-4">
+            {aboutUsClientImages.map((photo, index) => (
+              <Col lg={3} md={6} sm={6} key={photo.id || index}>
+                <div
+                  className="about-journey-card"
+                  onClick={() => setSelectedPhoto(photo)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`View ${photo.title}`}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") setSelectedPhoto(photo);
+                  }}
+                >
+                  <div className="about-journey-img-wrap">
+                    <img
+                      src={photo.img}
+                      alt={photo.title}
+                      loading="lazy"
+                      className="about-journey-img"
+                    />
+                    <div className="about-journey-zoom">
+                      <FaExpand size={13} />
+                    </div>
+                  </div>
+                  <div className="about-journey-body">
+                    <h4 className="about-journey-title">{photo.title}</h4>
+                    <p className="about-journey-caption">{photo.caption}</p>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+
+          {/* Lightbox Modal for About Us */}
+          {selectedPhoto && (
+            <div
+              className="soil-lightbox-backdrop"
+              onClick={() => setSelectedPhoto(null)}
+              role="dialog"
+              aria-modal="true"
+            >
+              <div
+                className="soil-lightbox-dialog"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  type="button"
+                  className="soil-lightbox-close"
+                  onClick={() => setSelectedPhoto(null)}
+                  aria-label="Close image preview"
+                >
+                  <FaTimes size={18} />
+                </button>
+                <div className="soil-lightbox-media">
+                  <img src={selectedPhoto.img} alt={selectedPhoto.title} />
+                </div>
+                <div className="soil-lightbox-details">
+                  <div className="d-flex align-items-center gap-2 mb-2">
+                    <span className="soil-lightbox-badge">{selectedPhoto.category}</span>
+                    <span className="soil-lightbox-type">SOIL Foundation Field Immersion</span>
+                  </div>
+                  <h3 className="soil-lightbox-title">{selectedPhoto.title}</h3>
+                  <p className="soil-lightbox-desc">{selectedPhoto.caption}</p>
+                </div>
+              </div>
+            </div>
+          )}
+        </Container>
+      </section>
 
       {/* ===================================================================
           8. GET INVOLVED (Strong Editorial CTA Navigation)

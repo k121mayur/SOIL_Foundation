@@ -19,7 +19,7 @@ import {
 } from "react-icons/fa";
 
 // Visual Asset
-import bannerImage from "../assets/WesternGhat.jpg";
+import { contactUsImages } from "../assets/clientImages";
 
 // Styles
 import "./ContactUsPage.css";
@@ -130,8 +130,8 @@ function ContactUsPage() {
       =================================================================== */}
       <section className="contact-hero-fullscreen">
         <img
-          src={bannerImage}
-          alt="Western Ghats Landscape"
+          src={contactUsImages.header}
+          alt={contactUsImages.alt}
           className="contact-hero-bg"
         />
         <div className="contact-hero-overlay" />
@@ -364,6 +364,21 @@ function ContactUsPage() {
                   <p className="contact-hours-text">
                     <strong>Working Hours:</strong> Monday – Saturday, 9:30 AM to 6:00 PM IST.
                     Office visits recommended by appointment.
+                  </p>
+                </div>
+
+                {/* Field Office & Community Showcase Card */}
+                <div className="contact-field-presence-card">
+                  <div className="contact-field-presence-img-wrap">
+                    <img
+                      src={contactUsImages.header}
+                      alt={contactUsImages.alt}
+                      className="contact-field-presence-img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="contact-field-presence-caption">
+                    Our on-ground presence in Uttara Kannada acts as the hub for community mobilization, workshops, and ecological stewardship.
                   </p>
                 </div>
               </div>

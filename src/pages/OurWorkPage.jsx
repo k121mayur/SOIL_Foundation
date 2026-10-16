@@ -14,9 +14,15 @@ import {
   FaProjectDiagram,
   FaMapMarkerAlt,
   FaGlobeAmericas,
+  FaTimes,
+  FaExpand,
 } from "react-icons/fa";
 
 // Image Assets
+import {
+  ourWorkGalleryImages,
+  ourWorkInitiativeImages,
+} from "../assets/clientImages";
 import bannerImage from "../assets/WesternGhat.jpg";
 import conservationImg from "../assets/conservation.jpg";
 import womenImg from "../assets/women.jpg";
@@ -37,6 +43,9 @@ gsap.registerPlugin(ScrollTrigger);
 function OurWorkPage() {
   const mainRef = useRef(null);
   const [activePillar, setActivePillar] = useState(0);
+  const [galleryFilter, setGalleryFilter] = useState("all");
+  const [visibleCount, setVisibleCount] = useState(12);
+  const [activeGalleryModal, setActiveGalleryModal] = useState(null);
 
   // GSAP Animations
   useEffect(() => {
@@ -125,6 +134,7 @@ function OurWorkPage() {
         {
           name: "Nursery Development Programme",
           quote: "Growing livelihoods while nurturing nature.",
+          image: ourWorkInitiativeImages.nurseryDevelopment,
           details:
             "Promotes nature-based livelihoods by engaging women SHG members in learning practical skills related to raising and caring for plants. Community plant nurseries generate sustainable income while greening the environment.",
         },
@@ -170,12 +180,14 @@ function OurWorkPage() {
         {
           name: "Women Entrepreneurship Development Programme",
           quote: "Empowering women to turn skills and ideas into sustainable livelihoods.",
+          image: ourWorkInitiativeImages.womenEntrepreneurship1,
           details:
             "Enables women SHG members to start and scale micro-enterprises such as petty shops, food processing, pickle and papad making, tailoring, and home-based businesses, integrated with digital financial tools.",
         },
         {
           name: "Tailoring & Embroidery Training Programme",
           quote: "Skills that create opportunities, confidence and livelihoods.",
+          image: ourWorkInitiativeImages.tailoringEmbroidery,
           details:
             "Integrates practical vocational stitching skills with financial literacy. Upon completion, participants receive essential equipment to launch independent livelihood ventures.",
         },
@@ -188,6 +200,7 @@ function OurWorkPage() {
         {
           name: "Kitchen Garden Initiative",
           quote: "Growing food, strengthening families and nurturing sustainable household practices.",
+          image: ourWorkInitiativeImages.kitchenGarden,
           details:
             "Provided vegetable garden kits and hands-on guidance across six Karnataka districts, enhancing household food nutrition security through low-cost, organic home farming.",
         },
@@ -429,6 +442,16 @@ function OurWorkPage() {
                 <div className="work-initiatives-list">
                   {currentPillar.initiatives.map((init, i) => (
                     <div key={i} className="work-initiative-card">
+                      {init.image && (
+                        <div className="work-initiative-thumb-wrap">
+                          <img
+                            src={init.image}
+                            alt={init.name}
+                            loading="lazy"
+                            className="work-initiative-thumb"
+                          />
+                        </div>
+                      )}
                       <div className="work-initiative-title">
                         {init.name}
                       </div>
@@ -584,6 +607,173 @@ function OurWorkPage() {
               SOIL Foundation • Nurturing Nature, Empowering Lives
             </div>
           </div>
+        </Container>
+      </section>
+
+      {/* ===================================================================
+          4B. GROUNDWORK IN ACTION (Filterable Field Action Gallery - 46 Images)
+      =================================================================== */}
+      <section id="field-gallery" className="work-field-gallery-section">
+        <Container>
+          <div className="text-center mb-5">
+            <span className="eyebrow-tag">ON-GROUND REALITIES</span>
+            <h2 className="work-section-heading">Groundwork in Action</h2>
+            <div className="decorative-divider center" />
+            <p className="work-field-gallery-lead">
+              A comprehensive visual record of our active field initiatives across Karnataka — spanning ecological conservation, women’s enterprise, classroom learning, and tribal development.
+            </p>
+          </div>
+
+          {/* Domain Category Filter Tabs */}
+          <div className="work-gallery-filter-tabs">
+            <button
+              type="button"
+              className={`work-gallery-tab-btn ${galleryFilter === "all" ? "active" : ""}`}
+              onClick={() => {
+                setGalleryFilter("all");
+                setVisibleCount(12);
+              }}
+            >
+              All Groundwork ({ourWorkGalleryImages.length})
+            </button>
+            <button
+              type="button"
+              className={`work-gallery-tab-btn ${galleryFilter === "ecology" ? "active" : ""}`}
+              onClick={() => {
+                setGalleryFilter("ecology");
+                setVisibleCount(12);
+              }}
+            >
+              Ecological Conservation ({ourWorkGalleryImages.filter(img => img.category === "ecology").length})
+            </button>
+            <button
+              type="button"
+              className={`work-gallery-tab-btn ${galleryFilter === "women" ? "active" : ""}`}
+              onClick={() => {
+                setGalleryFilter("women");
+                setVisibleCount(12);
+              }}
+            >
+              Women Empowerment ({ourWorkGalleryImages.filter(img => img.category === "women").length})
+            </button>
+            <button
+              type="button"
+              className={`work-gallery-tab-btn ${galleryFilter === "education" ? "active" : ""}`}
+              onClick={() => {
+                setGalleryFilter("education");
+                setVisibleCount(12);
+              }}
+            >
+              Education &amp; Youth ({ourWorkGalleryImages.filter(img => img.category === "education").length})
+            </button>
+            <button
+              type="button"
+              className={`work-gallery-tab-btn ${galleryFilter === "tribal" ? "active" : ""}`}
+              onClick={() => {
+                setGalleryFilter("tribal");
+                setVisibleCount(12);
+              }}
+            >
+              Tribal Development ({ourWorkGalleryImages.filter(img => img.category === "tribal").length})
+            </button>
+          </div>
+
+          {/* Gallery Grid */}
+          <Row className="gy-4">
+            {ourWorkGalleryImages
+              .filter((item) => galleryFilter === "all" || item.category === galleryFilter)
+              .slice(0, visibleCount)
+              .map((item, idx) => (
+                <Col lg={3} md={4} sm={6} key={item.id || idx}>
+                  <div
+                    className="work-gallery-card"
+                    onClick={() => setActiveGalleryModal(item)}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`View ${item.title}`}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") setActiveGalleryModal(item);
+                    }}
+                  >
+                    <div className="work-gallery-img-wrap">
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        loading="lazy"
+                        className="work-gallery-img"
+                      />
+                      <div className="work-gallery-zoom">
+                        <FaExpand size={13} />
+                      </div>
+                    </div>
+                    <div className="work-gallery-body">
+                      <h4 className="work-gallery-title">{item.title}</h4>
+                      <p className="work-gallery-desc">{item.desc}</p>
+                    </div>
+                  </div>
+                </Col>
+              ))}
+          </Row>
+
+          {/* View More Button if more images remain */}
+          {visibleCount < ourWorkGalleryImages.filter(item => galleryFilter === "all" || item.category === galleryFilter).length && (
+            <div className="text-center mt-5">
+              <button
+                type="button"
+                className="btn-soil-primary"
+                onClick={() => setVisibleCount(prev => prev + 12)}
+              >
+                <span>View More Field Photos</span>
+                <FaArrowRight size={12} />
+              </button>
+            </div>
+          )}
+
+          {/* Lightbox Modal for Our Work */}
+          {activeGalleryModal && (
+            <div
+              className="soil-lightbox-backdrop"
+              onClick={() => setActiveGalleryModal(null)}
+              role="dialog"
+              aria-modal="true"
+            >
+              <div
+                className="soil-lightbox-dialog"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  type="button"
+                  className="soil-lightbox-close"
+                  onClick={() => setActiveGalleryModal(null)}
+                  aria-label="Close image preview"
+                >
+                  <FaTimes size={18} />
+                </button>
+                <div className="soil-lightbox-media">
+                  <img
+                    src={activeGalleryModal.img}
+                    alt={activeGalleryModal.title}
+                  />
+                </div>
+                <div className="soil-lightbox-details">
+                  <div className="d-flex align-items-center gap-2 mb-2">
+                    <span className="soil-lightbox-badge">
+                      {activeGalleryModal.categoryLabel}
+                    </span>
+                    <span className="soil-lightbox-type">
+                      SOIL Foundation Field Action
+                    </span>
+                  </div>
+                  <h3 className="soil-lightbox-title">
+                    {activeGalleryModal.title}
+                  </h3>
+                  <p className="soil-lightbox-desc">
+                    {activeGalleryModal.desc}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
         </Container>
       </section>
 

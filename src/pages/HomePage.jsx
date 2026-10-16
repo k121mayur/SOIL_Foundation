@@ -11,9 +11,24 @@ import {
   FaDownload,
   FaFacebookF,
   FaLinkedinIn,
+  FaTimes,
+  FaExpand,
+  FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
 
 // Image Assets
+import {
+  homePageClientImages,
+  home1,
+  home2,
+  home3,
+  home4,
+  home5,
+  home6,
+  home7,
+  home8,
+} from "../assets/clientImages";
 import bannerImage from "../assets/WesternGhat.jpg";
 import tribalDev from "../assets/Tribal Development.jpg";
 import conservationImg from "../assets/conservation.jpg";
@@ -45,32 +60,128 @@ function HomePage() {
   const horizontalSectionRef = useRef(null);
   const horizontalTrackRef = useRef(null);
   const [activePillar, setActivePillar] = useState(0);
+  const [glimpseFilter, setGlimpseFilter] = useState("all");
+  const [activeModalImg, setActiveModalImg] = useState(null);
+  const [storyPhotoIndex, setStoryPhotoIndex] = useState({
+    "who-we-are": 0,
+    "our-story": 0,
+  });
 
-  // Who We Are & Our Story - Alternating Horizontal Compositions from /soil_art
+  const handleStoryPhotoChange = (storyId, direction, length) => {
+    setStoryPhotoIndex((prev) => {
+      const current = prev[storyId] || 0;
+      const next = (current + direction + length) % length;
+      return { ...prev, [storyId]: next };
+    });
+  };
+
+  // Who We Are & Our Story - Alternating Horizontal Compositions with Client Photography & Art Archive
   const whoWeAreStories = [
     {
       id: "who-we-are",
-      image: "/soil_art/IMG-20250304-WA0014.jpg",
-      caption: "Cradling Life • Soil and Green Sprout",
       title: "Who We Are",
-      quote: "At SOIL, we work with communities, not just for them — listening, learning, and nurturing locally owned solutions.",
+      quote:
+        "At SOIL, we work with communities, not just for them — listening, learning, and nurturing locally owned solutions.",
       description:
         "SOIL Foundation (Supporting Optimal Improvement of Lives) is an ambitious grassroots Civil Society Organization and registered public trust. Established in 2019 in the ecologically sensitive Western Ghats region of Uttara Kannada, Karnataka, SOIL was founded by young development professionals with a strong belief in giving back to society. We unite professional expertise, local knowledge, and collective action to create inclusive and sustainable solutions across Karnataka.",
       badge: "Registered Public Trust • Est. 2019",
       linkText: "Meet Our Team",
       linkHref: "/about#team",
+      photos: [
+        {
+          img: home1,
+          caption: "Community Assembly & Participatory Action • Western Ghats",
+          archiveTag: "Field Action Archive",
+          badgeType: "field",
+          title: "Community Assembly & Grama Samvaad",
+          desc: "Young development professionals facilitating participatory planning and dialogue with rural women collectives in Karnataka.",
+        },
+        {
+          img: home7,
+          caption: "Community Samvaad • Listening & Learning in the Field",
+          archiveTag: "Field Action Archive",
+          badgeType: "field",
+          title: "Interactive Community Dialogue",
+          desc: "Fostering local ownership and understanding grassroots realities through deep community engagement.",
+        },
+        {
+          img: home4,
+          caption: "Women & Adolescent Health Awareness • Field Outreach",
+          archiveTag: "Field Action Archive",
+          badgeType: "field",
+          title: "Community Health & Adolescent Workshop",
+          desc: "Equipping rural communities and adolescent girls with essential health education and dignity resources.",
+        },
+        {
+          img: home5,
+          caption: "Adolescent Girls Empowerment & Hygiene Dignity Kits",
+          archiveTag: "Field Action Archive",
+          badgeType: "field",
+          title: "Dignity & Hygiene Outreach",
+          desc: "Distributing hygiene essentials and building health awareness in rural educational institutions.",
+        },
+        {
+          img: "/soil_art/IMG-20250304-WA0014.jpg",
+          caption: "Cradling Life • Soil and Green Sprout",
+          archiveTag: "SOIL Art Archive",
+          badgeType: "art",
+          title: "Cradling Life • Soil and Green Sprout",
+          desc: "Original folk artwork depicting human hands tenderly nurturing green shoots from living soil.",
+        },
+      ],
     },
     {
       id: "our-story",
-      image: "/soil_art/IMG-20250304-WA0003.jpg",
-      caption: "Indigenous Heritage & Village Harmony",
       title: "Our Story",
-      quote: "Saving forests requires empowering the communities and hands that inhabit them.",
+      quote:
+        "Saving forests requires empowering the communities and hands that inhabit them.",
       description:
         "Having grown up in the Western Ghats, the founders of SOIL Foundation developed a profound connection with its natural environment and rural communities. Over the years, they witnessed growing pressures on nature and livelihoods — deforestation, unseasonal weather, mining, and water degradation. These experiences inspired them to step forward, bridging professional development methods with generational community wisdom to build resilient livelihoods and protect fragile ecosystems.",
       badge: "Grassroots Foundational Journey",
       linkText: "Our Foundational Story",
       linkHref: "/about#whoarewe",
+      photos: [
+        {
+          img: home3,
+          caption: "Youth Ecological Stewardship • Circle of Life in the Western Ghats",
+          archiveTag: "Field Action Archive",
+          badgeType: "field",
+          title: "Circle of Life • Student Tree Guardians",
+          desc: "Rural schoolgirls standing united in a protective circle around a newly planted sapling with Western Ghats hills in the backdrop.",
+        },
+        {
+          img: home2,
+          caption: "Green School Initiative • Hands in Soil, Planting the Fruitful Future",
+          archiveTag: "Field Action Archive",
+          badgeType: "field",
+          title: "Green School Initiative — Hands in Soil",
+          desc: "Youth taking stewardship of local ecology by digging pits, planting native fruit trees, and committing to nurture them.",
+        },
+        {
+          img: home6,
+          caption: "Ecosystem Stewardship • Community Plantation Action",
+          archiveTag: "Field Action Archive",
+          badgeType: "field",
+          title: "Community-Led Reforestation",
+          desc: "Connecting schools, teachers, and local communities to regenerate fragile Western Ghats green cover.",
+        },
+        {
+          img: home8,
+          caption: "Grassroots Collaboration • Community Action in Nature",
+          archiveTag: "Field Action Archive",
+          badgeType: "field",
+          title: "Western Ghats Community Network",
+          desc: "Partnering directly with local families to protect catchment zones and biodiversity corridors.",
+        },
+        {
+          img: "/soil_art/IMG-20250304-WA0003.jpg",
+          caption: "Indigenous Heritage & Village Harmony",
+          archiveTag: "SOIL Art Archive",
+          badgeType: "art",
+          title: "Indigenous Heritage & Village Harmony",
+          desc: "Authentic folk depiction celebrating traditional coexistence with forests and pastoral village life.",
+        },
+      ],
     },
   ];
 
@@ -283,8 +394,29 @@ function HomePage() {
       img: artResilience,
       title: "Resilience & Living Expression",
       type: "Grassroots Portrait",
+      desc: "Original folk portrait celebrating rural resilience in Karnataka.",
+      filterCategory: "art",
     },
   ];
+
+  // Combined Visual Archives: 8 Client Field Action Photos + 10 Authentic Art & Action Archives
+  const allGlimpses = [
+    ...homePageClientImages.map((c) => ({
+      ...c,
+      filterCategory: "field",
+    })),
+    ...glimpsesList.map((g) => ({
+      ...g,
+      filterCategory: g.filterCategory || "art",
+      category: g.category || "Authentic Art",
+      desc: g.desc || "Artistic expression from SOIL Foundation archives.",
+    })),
+  ];
+
+  const filteredGlimpses =
+    glimpseFilter === "all"
+      ? allGlimpses
+      : allGlimpses.filter((item) => item.filterCategory === glimpseFilter);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -541,6 +673,19 @@ function HomePage() {
         <div className="horizontal-track" ref={horizontalTrackRef}>
           {whoWeAreStories.map((story, index) => {
             const isReversed = index % 2 === 1; // Alternating composition!
+            const photos = story.photos || [
+              {
+                img: story.image,
+                caption: story.caption,
+                archiveTag: "SOIL Archive",
+                badgeType: "art",
+                title: story.title,
+                desc: story.description,
+              },
+            ];
+            const currentIndex = storyPhotoIndex[story.id] || 0;
+            const activePhoto = photos[currentIndex] || photos[0];
+
             return (
               <div key={story.id} className="horizontal-panel">
                 <div className="story-panel-inner">
@@ -553,23 +698,105 @@ function HomePage() {
                     <div className="story-panel-img-col">
                       <div className="story-panel-img-frame">
                         <img
-                          src={story.image}
-                          alt={story.title}
+                          key={`${story.id}-${currentIndex}`}
+                          src={activePhoto.img}
+                          alt={activePhoto.caption || story.title}
                           loading="lazy"
+                          className="story-panel-current-img"
                         />
-                        <div className="story-panel-img-caption">
-                          <span>{story.caption}</span>
-                          <span
-                            style={{
-                              fontSize: "0.74rem",
-                              letterSpacing: "0.1em",
-                              textTransform: "uppercase",
-                              fontFamily: "'Inter', sans-serif",
-                              color: "#B99A76",
-                            }}
+
+                        {/* Top Controls: Quick Lightbox Button */}
+                        <div className="story-panel-top-controls justify-content-end">
+                          <button
+                            type="button"
+                            className="story-panel-expand-btn"
+                            onClick={() =>
+                              setActiveModalImg({
+                                img: activePhoto.img,
+                                title: activePhoto.title || story.title,
+                                desc: activePhoto.desc || activePhoto.caption,
+                                type: activePhoto.archiveTag,
+                                filterCategory: activePhoto.badgeType,
+                              })
+                            }
+                            aria-label="Expand image"
+                            title="View high resolution"
                           >
-                            SOIL Art Archive
-                          </span>
+                            <FaExpand size={12} />
+                            <span>View Full</span>
+                          </button>
+                        </div>
+
+                        {/* Left & Right Navigation Arrows */}
+                        {photos.length > 1 && (
+                          <>
+                            <button
+                              type="button"
+                              className="story-panel-nav-btn prev-btn"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleStoryPhotoChange(
+                                  story.id,
+                                  -1,
+                                  photos.length
+                                );
+                              }}
+                              aria-label="Previous photo"
+                            >
+                              <FaChevronLeft size={13} />
+                            </button>
+                            <button
+                              type="button"
+                              className="story-panel-nav-btn next-btn"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleStoryPhotoChange(
+                                  story.id,
+                                  1,
+                                  photos.length
+                                );
+                              }}
+                              aria-label="Next photo"
+                            >
+                              <FaChevronRight size={13} />
+                            </button>
+                          </>
+                        )}
+
+                        {/* Bottom Overlay Caption & Dot Indicators */}
+                        <div className="story-panel-img-caption">
+                          <div className="story-caption-text-wrap">
+                            <span>{activePhoto.caption}</span>
+                          </div>
+                          <div className="story-caption-right-wrap">
+                            {photos.length > 1 && (
+                              <div className="story-gallery-dots">
+                                {photos.map((_, pIdx) => (
+                                  <button
+                                    key={pIdx}
+                                    type="button"
+                                    className={`story-dot ${
+                                      pIdx === currentIndex ? "active" : ""
+                                    }`}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setStoryPhotoIndex((prev) => ({
+                                        ...prev,
+                                        [story.id]: pIdx,
+                                      }));
+                                    }}
+                                    aria-label={`View photo ${pIdx + 1}`}
+                                    title={`Photo ${pIdx + 1} of ${
+                                      photos.length
+                                    }`}
+                                  />
+                                ))}
+                              </div>
+                            )}
+                            <span className="story-archive-badge-text">
+                              {activePhoto.archiveTag}
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1190,11 +1417,53 @@ function HomePage() {
             <div className="decorative-divider center" />
           </div>
 
+          {/* Interactive Visual Category Filter Tabs */}
+          <div className="glimpses-filter-tabs">
+            <button
+              type="button"
+              className={`glimpse-filter-btn ${
+                glimpseFilter === "all" ? "active" : ""
+              }`}
+              onClick={() => setGlimpseFilter("all")}
+            >
+              All Visuals ({allGlimpses.length})
+            </button>
+            <button
+              type="button"
+              className={`glimpse-filter-btn ${
+                glimpseFilter === "field" ? "active" : ""
+              }`}
+              onClick={() => setGlimpseFilter("field")}
+            >
+              Field Action &amp; Community ({homePageClientImages.length})
+            </button>
+            <button
+              type="button"
+              className={`glimpse-filter-btn ${
+                glimpseFilter === "art" ? "active" : ""
+              }`}
+              onClick={() => setGlimpseFilter("art")}
+            >
+              Art &amp; Heritage ({glimpsesList.length})
+            </button>
+          </div>
+
           <Row className="gy-4 stagger-trigger">
-            {glimpsesList.map((item, index) => (
-              <Col lg={3} md={6} sm={6} key={index} className="stagger-card-item">
-                <div className="glimpse-card">
-                  <img src={item.img} alt={item.title} />
+            {filteredGlimpses.map((item, index) => (
+              <Col lg={3} md={6} sm={6} key={item.id || index} className="stagger-card-item">
+                <div
+                  className="glimpse-card"
+                  onClick={() => setActiveModalImg(item)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`View ${item.title}`}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      setActiveModalImg(item);
+                    }
+                  }}
+                >
+                  <img src={item.img} alt={item.title} loading="lazy" />
                   <div className="glimpse-overlay">
                     <div>
                       <small
@@ -1204,17 +1473,70 @@ function HomePage() {
                           fontSize: "0.7rem",
                           textTransform: "uppercase",
                           letterSpacing: "0.08em",
+                          display: "block",
+                          marginBottom: "4px",
                         }}
                       >
                         {item.type}
                       </small>
                       <div className="glimpse-caption">{item.title}</div>
                     </div>
+                    <div className="glimpse-expand-icon">
+                      <FaExpand size={13} />
+                    </div>
                   </div>
                 </div>
               </Col>
             ))}
           </Row>
+
+          {/* Interactive Lightbox Modal */}
+          {activeModalImg && (
+            <div
+              className="soil-lightbox-backdrop"
+              onClick={() => setActiveModalImg(null)}
+              role="dialog"
+              aria-modal="true"
+            >
+              <div
+                className="soil-lightbox-dialog"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  type="button"
+                  className="soil-lightbox-close"
+                  onClick={() => setActiveModalImg(null)}
+                  aria-label="Close image preview"
+                >
+                  <FaTimes size={18} />
+                </button>
+                <div className="soil-lightbox-media">
+                  <img
+                    src={activeModalImg.img}
+                    alt={activeModalImg.title}
+                  />
+                </div>
+                <div className="soil-lightbox-details">
+                  <div className="d-flex align-items-center gap-2 mb-2">
+                    <span className="soil-lightbox-badge">
+                      {activeModalImg.filterCategory === "field"
+                        ? "Grassroots Fieldwork"
+                        : "Visual Heritage"}
+                    </span>
+                    <span className="soil-lightbox-type">
+                      {activeModalImg.type}
+                    </span>
+                  </div>
+                  <h3 className="soil-lightbox-title">
+                    {activeModalImg.title}
+                  </h3>
+                  <p className="soil-lightbox-desc">
+                    {activeModalImg.desc}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
         </Container>
       </section>
 

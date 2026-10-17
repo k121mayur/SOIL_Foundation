@@ -398,7 +398,7 @@ function Footer() {
           </Col>
           <Col md={6} className="text-center text-md-end">
             <p className="footer-bottom-text">
-              Supported by{" "}
+              Developed by{" "}
               <a
                 href="https://www.siliconmango.com"
                 target="_blank"

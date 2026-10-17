@@ -23,20 +23,21 @@ import {
   ourWorkGalleryImages,
   ourWorkInitiativeImages,
 } from "../assets/clientImages";
-import bannerImage from "../assets/WesternGhat.jpg";
-import conservationImg from "../assets/conservation.jpg";
-import womenImg from "../assets/women.jpg";
-import tribalDevImg from "../assets/Tribal Development.jpg";
-import eduImg from "../images/7.png";
+import conservationImg from "../assets/conservation.webp";
+import womenImg from "../assets/women.webp";
+import tribalDevImg from "../assets/Tribal Development.webp";
+import eduImg from "../images/7.webp";
 
 // Soil Foundation Authentic Artworks from "Soil Foundation images"
-import artEcologyProtect from "../assets/soil_art/IMG-20250304-WA0011.jpg";
-import artEmpower from "../assets/soil_art/IMG-20250304-WA0007.jpg";
-import artEducation from "../assets/soil_art/IMG-20250304-WA0001.jpg";
-import artTribal from "../assets/soil_art/IMG-20250304-WA0003.jpg";
+import artEcologyProtect from "../assets/soil_art/IMG-20250304-WA0011.webp";
+import artEmpower from "../assets/soil_art/IMG-20250304-WA0007.webp";
+import artEducation from "../assets/soil_art/IMG-20250304-WA0001.webp";
+import artTribal from "../assets/soil_art/IMG-20250304-WA0003.webp";
 
 // Styles
 import "./OurWorkPage.css";
+
+const bannerImage = `${process.env.PUBLIC_URL}/WesternGhat.webp`;
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -292,6 +293,10 @@ function OurWorkPage() {
           src={bannerImage}
           alt="Western Ghats Landscape"
           className="work-hero-bg"
+          fetchPriority="high"
+          decoding="async"
+          width="1920"
+          height="1080"
         />
         <div className="work-hero-overlay" />
 
@@ -377,7 +382,6 @@ function OurWorkPage() {
                 key={pillar.id}
                 onClick={() => setActivePillar(idx)}
                 className={`work-tab-btn ${activePillar === idx ? "active" : ""}`}
-                aria-label={`Select ${pillar.title}`}
               >
                 <span className="work-tab-num">{pillar.number}</span>
                 <span>{pillar.icon}</span>
@@ -395,6 +399,8 @@ function OurWorkPage() {
                   <img
                     src={currentPillar.image}
                     alt={currentPillar.title}
+                    loading="lazy"
+                    decoding="async"
                     className="work-showcase-img"
                   />
                 </div>
@@ -404,6 +410,8 @@ function OurWorkPage() {
                   <img
                     src={currentPillar.artImage}
                     alt={currentPillar.artCaption}
+                    loading="lazy"
+                    decoding="async"
                     className="work-art-thumb"
                   />
                   <div>
@@ -690,7 +698,6 @@ function OurWorkPage() {
                     onClick={() => setActiveGalleryModal(item)}
                     role="button"
                     tabIndex={0}
-                    aria-label={`View ${item.title}`}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") setActiveGalleryModal(item);
                     }}
@@ -707,7 +714,7 @@ function OurWorkPage() {
                       </div>
                     </div>
                     <div className="work-gallery-body">
-                      <h4 className="work-gallery-title">{item.title}</h4>
+                      <h3 className="work-gallery-title">{item.title}</h3>
                       <p className="work-gallery-desc">{item.desc}</p>
                     </div>
                   </div>
@@ -783,7 +790,7 @@ function OurWorkPage() {
       <section id="partner-cta" className="work-cta-section">
         <Container>
           <div className="work-cta-card">
-            <span className="eyebrow-tag" style={{ color: "#B99A76" }}>
+            <span className="eyebrow-tag" style={{ color: "#DFC7A7" }}>
               JOIN OUR JOURNEY
             </span>
             <h2 className="work-cta-title">

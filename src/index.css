@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-
 :root {
   /* SOIL Foundation Official Redesign Palette */
   --bg-main: #F5F1E8;
@@ -9,7 +7,7 @@
   --color-btn-hover: #697653;
   --color-impact-bg: #344B38;
   --color-section-alt: #E8E2D5;
-  --color-highlight: #A66B4E;
+  --color-highlight: #824729;
   --color-decorative: #B99A76;
   --color-body: #49483D;
   --color-white: #FFFFFF;

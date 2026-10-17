@@ -88,12 +88,12 @@ body {
 }
 
 .footer-bottom-text a {
-  color: #B99A76 !important;
+  color: #F5F1E8 !important;
   transition: color 0.2s ease;
 }
 
 .footer-bottom-text a:hover {
-  color: #F5F1E8 !important;
+  color: #DFC7A7 !important;
 }
 
 /* Section scroll offset */

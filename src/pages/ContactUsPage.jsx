@@ -133,6 +133,10 @@ function ContactUsPage() {
           src={contactUsImages.header}
           alt={contactUsImages.alt}
           className="contact-hero-bg"
+          fetchPriority="high"
+          decoding="async"
+          width="1920"
+          height="1080"
         />
         <div className="contact-hero-overlay" />
 
@@ -197,6 +201,7 @@ function ContactUsPage() {
       =================================================================== */}
       <section id="contact-channels" className="contact-channels-section">
         <Container>
+          <h2 className="visually-hidden">Quick Contact Channels</h2>
           <Row className="gy-4">
             {/* Card 1: Direct Phone */}
             <Col lg={3} sm={6}>
@@ -320,9 +325,9 @@ function ContactUsPage() {
                       <FaLeaf size={16} />
                     </div>
                     <div>
-                      <h4 className="contact-purpose-heading">
+                      <h3 className="contact-purpose-heading">
                         CSR &amp; Environmental Alliances
-                      </h4>
+                      </h3>
                       <p className="contact-purpose-desc">
                         Co-create auditable conservation, nursery, and water revival projects.
                       </p>
@@ -334,9 +339,9 @@ function ContactUsPage() {
                       <FaHandsHelping size={16} />
                     </div>
                     <div>
-                      <h4 className="contact-purpose-heading">
+                      <h3 className="contact-purpose-heading">
                         Volunteering &amp; Community Visits
-                      </h4>
+                      </h3>
                       <p className="contact-purpose-desc">
                         Participate in tree nurturing, student mentoring, and field workshops.
                       </p>
@@ -348,9 +353,9 @@ function ContactUsPage() {
                       <FaAward size={16} />
                     </div>
                     <div>
-                      <h4 className="contact-purpose-heading">
+                      <h3 className="contact-purpose-heading">
                         Donations &amp; 80G Tax Deductions
-                      </h4>
+                      </h3>
                       <p className="contact-purpose-desc">
                         Contribute with full transparency, receipting, and compliance certificates.
                       </p>
@@ -611,7 +616,7 @@ function ContactUsPage() {
                     <FaBuilding />
                   </div>
                   <div>
-                    <h4 className="office-item-title">Corporate Office</h4>
+                    <h3 className="office-item-title">Corporate Office</h3>
                     <p className="office-item-address">
                       Lakshmi Krishna Nilaya, 5th Main, 3rd Cross,<br />
                       Gayatri Nagar, Banavasi Road, Sirsi – 581401,<br />
@@ -635,13 +640,13 @@ function ContactUsPage() {
                     <FaMapMarkerAlt />
                   </div>
                   <div>
-                    <h4 className="office-item-title">Registered Trust Office</h4>
+                    <h3 className="office-item-title">Registered Trust Office</h3>
                     <p className="office-item-address">
                       #63, Shirasagaon (V), Kakkalli (P),<br />
                       Sirsi Taluk, Uttara Kannada District,<br />
                       Karnataka – 582336, India
                     </p>
-                    <span style={{ fontSize: "0.82rem", color: "#8C8B80" }}>
+                    <span style={{ fontSize: "0.82rem", color: "#5D5C53" }}>
                       Registered under the Indian Trust Act, 2019
                     </span>
                   </div>
@@ -662,7 +667,7 @@ function ContactUsPage() {
             <Col lg={6}>
               <div className="map-frame-card">
                 <div className="map-frame-header">
-                  <h4 className="map-frame-title">Sirsi &amp; Western Ghats, Karnataka</h4>
+                  <h3 className="map-frame-title">Sirsi &amp; Western Ghats, Karnataka</h3>
                   <a
                     href="https://maps.google.com/?q=Sirsi,+Uttara+Kannada,+Karnataka"
                     target="_blank"

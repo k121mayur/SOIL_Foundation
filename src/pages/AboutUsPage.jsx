@@ -25,19 +25,20 @@ import {
 
 // Image Assets
 import { aboutUsClientImages } from "../assets/clientImages";
-import bannerImage from "../assets/WesternGhat.jpg";
-import directorPhoto from "../assets/vinayashree_ceo.jpg";
-import tribalStripPattern from "../assets/tribal_strip_pattern.png";
-import conservationImg from "../assets/conservation.jpg";
-import womenImg from "../assets/women.jpg";
-import tribalDevImg from "../assets/Tribal Development.jpg";
-import eduImg from "../images/7.png";
+import directorPhoto from "../assets/vinayashree_ceo.webp";
+import tribalStripPattern from "../assets/tribal_strip_pattern.webp";
+import conservationImg from "../assets/conservation.webp";
+import womenImg from "../assets/women.webp";
+import tribalDevImg from "../assets/Tribal Development.webp";
+import eduImg from "../images/7.webp";
 
 // Soil Artworks
-import artSupport from "../assets/soil_art/IMG-20250304-WA0016.jpg";
+import artSupport from "../assets/soil_art/IMG-20250304-WA0016.webp";
 
 // Styles
 import "./AboutUsPage.css";
+
+const bannerImage = `${process.env.PUBLIC_URL}/WesternGhat.webp`;
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,14 +53,14 @@ function AboutUsPage() {
       // Hero atmospheric reveal
       gsap.fromTo(
         ".about-hero-bg",
-        { scale: 1.12 },
-        { scale: 1.04, duration: 2.2, ease: "power2.out" }
+        { scale: 1.08 },
+        { scale: 1.02, duration: 1.6, ease: "power2.out" }
       );
 
       gsap.fromTo(
         ".about-hero-reveal",
-        { y: 35, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1.2, stagger: 0.18, ease: "power3.out" }
+        { y: 20, opacity: 0.2 },
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: "power2.out" }
       );
 
       // Impact Counter Animation
@@ -199,6 +200,10 @@ function AboutUsPage() {
           src={bannerImage}
           alt="Western Ghats Landscape"
           className="about-hero-bg"
+          fetchPriority="high"
+          decoding="async"
+          width="1920"
+          height="1080"
         />
         <div className="about-hero-overlay" />
 
@@ -414,6 +419,8 @@ function AboutUsPage() {
         <img
           src={tribalStripPattern}
           alt="Tribal art border strip"
+          loading="lazy"
+          decoding="async"
           className="tribal-divider-img"
         />
       </div>
@@ -533,6 +540,8 @@ function AboutUsPage() {
                     <img
                       src={currentPillar.image}
                       alt={currentPillar.title}
+                      loading="lazy"
+                      decoding="async"
                       className="what-showcase-img"
                     />
                     <div className="what-showcase-caption">
@@ -563,9 +572,9 @@ function AboutUsPage() {
                     <div className="initiative-editorial-list">
                       {currentPillar.items.map((item, i) => (
                         <div key={i} className="initiative-editorial-item">
-                          <h4 className="initiative-editorial-title">
+                          <h3 className="initiative-editorial-title">
                             {item.title}
-                          </h4>
+                          </h3>
                           <p className="initiative-editorial-desc">
                             {item.desc}
                           </p>
@@ -708,7 +717,7 @@ function AboutUsPage() {
                     <FaWater size={16} />
                   </div>
                 </div>
-                <h4 className="horizon-title">Protecting the Western Ghats</h4>
+                <h3 className="horizon-title">Protecting the Western Ghats</h3>
               </div>
               <p className="horizon-desc">
                 Focusing on conserving small and medium-scale wild water bodies.
@@ -724,7 +733,7 @@ function AboutUsPage() {
                     <FaFemale size={16} />
                   </div>
                 </div>
-                <h4 className="horizon-title">Boosting Women Entrepreneurship</h4>
+                <h3 className="horizon-title">Boosting Women Entrepreneurship</h3>
               </div>
               <p className="horizon-desc">
                 Expanding training and business support programs to nurture local
@@ -741,7 +750,7 @@ function AboutUsPage() {
                     <FaGraduationCap size={16} />
                   </div>
                 </div>
-                <h4 className="horizon-title">Revolutionizing Education</h4>
+                <h3 className="horizon-title">Revolutionizing Education</h3>
               </div>
               <p className="horizon-desc">
                 Deepening our support for girl child education and extending our
@@ -758,7 +767,7 @@ function AboutUsPage() {
                     <FaUsers size={16} />
                   </div>
                 </div>
-                <h4 className="horizon-title">Enhancing Tribal Development</h4>
+                <h3 className="horizon-title">Enhancing Tribal Development</h3>
               </div>
               <p className="horizon-desc">
                 Launching tailored initiatives to preserve indigenous knowledge,
@@ -803,6 +812,8 @@ function AboutUsPage() {
                   <img
                     src={directorPhoto}
                     alt="Mrs. Vinayashree Gaonkar, CEO"
+                    loading="lazy"
+                    decoding="async"
                     className="ceo-portrait-img"
                   />
                   <div className="ceo-badge-floating">
@@ -921,7 +932,6 @@ function AboutUsPage() {
                   onClick={() => setSelectedPhoto(photo)}
                   role="button"
                   tabIndex={0}
-                  aria-label={`View ${photo.title}`}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") setSelectedPhoto(photo);
                   }}
@@ -938,7 +948,7 @@ function AboutUsPage() {
                     </div>
                   </div>
                   <div className="about-journey-body">
-                    <h4 className="about-journey-title">{photo.title}</h4>
+                    <h3 className="about-journey-title">{photo.title}</h3>
                     <p className="about-journey-caption">{photo.caption}</p>
                   </div>
                 </div>
@@ -992,6 +1002,8 @@ function AboutUsPage() {
             <img
               src={artSupport}
               alt="Community Art"
+              loading="lazy"
+              decoding="async"
               className="get-involved-art-watermark"
             />
             <Row className="position-relative" style={{ zIndex: 2 }}>

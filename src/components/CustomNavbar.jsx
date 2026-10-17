@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
-import logo from '../images/SOIL_Foundation_Logo-removebg.png';
+import logo from '../images/SOIL_Foundation_Logo-removebg.webp';
 import fallbackLogo from '../images/SOIL_Foundation_Logo.ico';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -22,7 +22,7 @@ function CustomNavbar() {
   }, []);
 
   const textColor = scrolled ? '#344B38' : '#F5F1E8';
-  const subtitleColor = scrolled ? '#A66B4E' : '#B99A76';
+  const subtitleColor = scrolled ? '#824729' : '#DFC7A7';
   const textShadowStyle = scrolled ? 'none' : '0 2px 10px rgba(0, 0, 0, 0.55)';
 
   return (
@@ -112,6 +112,7 @@ function CustomNavbar() {
         {/* Toggle button for mobile view */}
         <Navbar.Toggle
           aria-controls="soil-navbar-nav"
+          aria-label="Toggle navigation menu"
           className="border-0 shadow-none px-2"
           style={{
             filter: scrolled ? 'none' : 'invert(1) brightness(2)',

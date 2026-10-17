@@ -327,7 +327,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #A66B4E;
+  color: #824729;
 }
 
 /* Collaboration pillars list */
@@ -411,7 +411,7 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 600;
-  color: #A66B4E;
+  color: #824729;
   margin-bottom: 0.5rem;
 }
 
@@ -484,7 +484,7 @@
 }
 
 .soil-form-label .required-mark {
-  color: #A66B4E;
+  color: #824729;
   margin-left: 2px;
 }
 
@@ -661,8 +661,8 @@ textarea.soil-input {
   width: 42px;
   height: 42px;
   border-radius: 10px;
-  background-color: rgba(166, 107, 78, 0.12);
-  color: #A66B4E;
+  background-color: rgba(130, 71, 41, 0.12);
+  color: #824729;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -691,7 +691,7 @@ textarea.soil-input {
   gap: 0.4rem;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #A66B4E;
+  color: #824729;
   text-decoration: none;
 }
 

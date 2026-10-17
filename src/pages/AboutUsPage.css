@@ -161,7 +161,7 @@
 .about-who-section {
   position: relative;
   background-color: #FAF5EB;
-  background-image: url('../assets/who_we_are_bg.png');
+  background-image: url('../assets/who_we_are_bg.webp');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -441,7 +441,7 @@
 .about-vm-section {
   position: relative;
   background-color: #E8E2D5;
-  background-image: url('../assets/vision_mission_contour_bg.jpg');
+  background-image: url('../assets/vision_mission_contour_bg.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -632,11 +632,11 @@
   font-family: var(--font-sans);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .what-tab-btn.active .what-tab-num {
-  color: #B99A76;
+  color: #DFC7A7;
   opacity: 1;
 }
 
@@ -743,7 +743,7 @@
 .about-impact-section {
   position: relative;
   background-color: #172c1e;
-  background-image: url('../assets/our_impact_bg.png');
+  background-image: url('../assets/our_impact_bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -982,7 +982,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #A66B4E;
+  color: #824729;
 }
 
 .horizon-icon-wrap {
@@ -1102,7 +1102,7 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #A66B4E;
+  color: #824729;
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -1120,7 +1120,7 @@
   font-family: var(--font-serif);
   font-size: clamp(1.15rem, 1.55vw, 1.35rem);
   font-style: italic;
-  color: #A66B4E;
+  color: #824729;
   line-height: 1.55;
   border-left: 2.5px solid #B99A76;
   padding-left: 1.2rem;
@@ -1139,7 +1139,7 @@
 .team-editorial-box {
   position: relative;
   background-color: #f7d5c9;
-  background-image: url('../assets/team_bg.jpg');
+  background-image: url('../assets/team_bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

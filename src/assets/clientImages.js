@@ -2,76 +2,76 @@
 // Paths correspond to files in 'src/assets/Images latest/'
 
 // --- Contact Us Page (1 image) ---
-import contactHeaderImg from "./Images latest/Contact Us Page/IMG20260608155530.jpg";
+import contactHeaderImg from "./Images latest/Contact Us Page/IMG20260608155530.webp";
 
 // --- Home Page (8 images) ---
-import home1 from "./Images latest/Home - Main Page/BAI00729.JPG";
-import home2 from "./Images latest/Home - Main Page/DSC_1773.jpg";
-import home3 from "./Images latest/Home - Main Page/DSC_1803.jpg";
-import home4 from "./Images latest/Home - Main Page/DSC_7243.JPG";
-import home5 from "./Images latest/Home - Main Page/DSC_7257.JPG";
-import home6 from "./Images latest/Home - Main Page/IMG_20260608_110844275_HDR.jpg";
-import home7 from "./Images latest/Home - Main Page/WhatsApp Image 2026-04-16 at 6.14.57 PM.jpeg";
-import home8 from "./Images latest/Home - Main Page/WhatsApp Image 2026-04-16 at 6.14.58 PM (2).jpeg";
+import home1 from "./Images latest/Home - Main Page/BAI00729.webp";
+import home2 from "./Images latest/Home - Main Page/DSC_1773.webp";
+import home3 from "./Images latest/Home - Main Page/DSC_1803.webp";
+import home4 from "./Images latest/Home - Main Page/DSC_7243.webp";
+import home5 from "./Images latest/Home - Main Page/DSC_7257.webp";
+import home6 from "./Images latest/Home - Main Page/IMG_20260608_110844275_HDR.webp";
+import home7 from "./Images latest/Home - Main Page/WhatsApp Image 2026-04-16 at 6.14.57 PM.webp";
+import home8 from "./Images latest/Home - Main Page/WhatsApp Image 2026-04-16 at 6.14.58 PM (2).webp";
 
 // --- About Us Page (8 images) ---
-import about1 from "./Images latest/About Us page/BAI03240.JPG";
-import about2 from "./Images latest/About Us page/DSC_1782.jpg";
-import about3 from "./Images latest/About Us page/DSC_1837.jpg";
-import about4 from "./Images latest/About Us page/VKP_8403.jpg";
-import about5 from "./Images latest/About Us page/VKP_8434.jpg";
-import about6 from "./Images latest/About Us page/VKP_8458.jpg";
-import about7 from "./Images latest/About Us page/WhatsApp Image 2026-03-12 at 7.09.00 PM.jpeg";
-import about8 from "./Images latest/About Us page/WhatsApp Image 2026-04-08 at 6.21.27 PM.jpeg";
+import about1 from "./Images latest/About Us page/BAI03240.webp";
+import about2 from "./Images latest/About Us page/DSC_1782.webp";
+import about3 from "./Images latest/About Us page/DSC_1837.webp";
+import about4 from "./Images latest/About Us page/VKP_8403.webp";
+import about5 from "./Images latest/About Us page/VKP_8434.webp";
+import about6 from "./Images latest/About Us page/VKP_8458.webp";
+import about7 from "./Images latest/About Us page/WhatsApp Image 2026-03-12 at 7.09.00 PM.webp";
+import about8 from "./Images latest/About Us page/WhatsApp Image 2026-04-08 at 6.21.27 PM.webp";
 
 // --- Our Work Page (46 images) ---
-import workInitiativeKitchen from "./Images latest/Our Work Page/Kitchen Garden Initiative.jpg";
-import workInitiativeNursery from "./Images latest/Our Work Page/Nursary Development Programme.jpg";
-import workInitiativeTailoring from "./Images latest/Our Work Page/Tailoring & Embroidery Training Programme.jpg";
-import workInitiativeWomenEnt1 from "./Images latest/Our Work Page/Women Entrepreneurship Development Programme.jpeg";
-import workInitiativeWomenEnt2 from "./Images latest/Our Work Page/Women Entrepreneurship Development Programme (2).jpeg";
+import workInitiativeKitchen from "./Images latest/Our Work Page/Kitchen Garden Initiative.webp";
+import workInitiativeNursery from "./Images latest/Our Work Page/Nursary Development Programme.webp";
+import workInitiativeTailoring from "./Images latest/Our Work Page/Tailoring & Embroidery Training Programme.webp";
+import workInitiativeWomenEnt1 from "./Images latest/Our Work Page/Women Entrepreneurship Development Programme.webp";
+import workInitiativeWomenEnt2 from "./Images latest/Our Work Page/Women Entrepreneurship Development Programme (2).webp";
 
-import work1 from "./Images latest/Our Work Page/BAI00755.JPG";
-import work2 from "./Images latest/Our Work Page/BAI03242.JPG";
-import work3 from "./Images latest/Our Work Page/DSC_1807.jpg";
-import work4 from "./Images latest/Our Work Page/DSC_1810.jpg";
-import work5 from "./Images latest/Our Work Page/DSC_7245.JPG";
-import work6 from "./Images latest/Our Work Page/DSC_7256.JPG";
-import work7 from "./Images latest/Our Work Page/IMG-20220414-WA0066.jpg";
-import work8 from "./Images latest/Our Work Page/IMG-20220415-WA0000.jpg";
-import work9 from "./Images latest/Our Work Page/IMG-20250224-WA0007.jpg";
-import work10 from "./Images latest/Our Work Page/IMG20260608110642.jpg";
-import work11 from "./Images latest/Our Work Page/IMG20260608110740.jpg";
-import work12 from "./Images latest/Our Work Page/IMG20260608111147.jpg";
-import work13 from "./Images latest/Our Work Page/IMG20260608155650.jpg";
-import work14 from "./Images latest/Our Work Page/IMG20260608160009.jpg";
-import work15 from "./Images latest/Our Work Page/IMG20260608162829.jpg";
-import work16 from "./Images latest/Our Work Page/IMG20260608162854.jpg";
-import work17 from "./Images latest/Our Work Page/IMG_20260608_111132137_HDR.jpg";
-import work18 from "./Images latest/Our Work Page/VKP_8402.jpg";
-import work19 from "./Images latest/Our Work Page/VKP_8461.jpg";
-import work20 from "./Images latest/Our Work Page/VKP_8473.jpg";
-import work21 from "./Images latest/Our Work Page/WhatsApp Image 2025-04-12 at 2.39.10 PM.jpeg";
-import work22 from "./Images latest/Our Work Page/WhatsApp Image 2026-01-06 at 7.51.59 AM (1).jpeg";
-import work23 from "./Images latest/Our Work Page/WhatsApp Image 2026-01-06 at 7.51.59 AM (2).jpeg";
-import work24 from "./Images latest/Our Work Page/WhatsApp Image 2026-01-06 at 7.51.59 AM.jpeg";
-import work25 from "./Images latest/Our Work Page/WhatsApp Image 2026-03-12 at 7.09.00 PM (1).jpeg";
-import work26 from "./Images latest/Our Work Page/WhatsApp Image 2026-03-12 at 7.09.00 PM (2).jpeg";
-import work27 from "./Images latest/Our Work Page/WhatsApp Image 2026-03-12 at 7.09.00 PM.jpeg";
-import work28 from "./Images latest/Our Work Page/WhatsApp Image 2026-03-12 at 7.09.01 PM.jpeg";
-import work29 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-08 at 6.03.06 PM (1).jpeg";
-import work30 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-08 at 6.21.32 PM.jpeg";
-import work31 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-16 at 6.14.57 PM (1).jpeg";
-import work32 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-16 at 6.14.58 PM (1).jpeg";
-import work33 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-16 at 6.14.58 PM.jpeg";
-import work34 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-16 at 6.15.44 PM.jpeg";
-import work35 from "./Images latest/Our Work Page/WhatsApp Image 2026-08-14 at 12.36.47 PM (1).jpeg";
-import work36 from "./Images latest/Our Work Page/WhatsApp Image 2026-08-14 at 8.03.14 PM (1).jpeg";
-import work37 from "./Images latest/Our Work Page/WhatsApp Image 2026-08-14 at 8.03.14 PM.jpeg";
-import work38 from "./Images latest/Our Work Page/WhatsApp Image 2026-10-05 at 7.09.25 PM (1).jpeg";
-import work39 from "./Images latest/Our Work Page/WhatsApp Image 2026-10-05 at 7.09.25 PM.jpeg";
-import work40 from "./Images latest/Our Work Page/WhatsApp Image 2026-10-05 at 7.09.26 PM.jpeg";
-import work41 from "./Images latest/Our Work Page/WhatsApp Image 2026-10-05 at 7.09.27 PM.jpeg";
+import work1 from "./Images latest/Our Work Page/BAI00755.webp";
+import work2 from "./Images latest/Our Work Page/BAI03242.webp";
+import work3 from "./Images latest/Our Work Page/DSC_1807.webp";
+import work4 from "./Images latest/Our Work Page/DSC_1810.webp";
+import work5 from "./Images latest/Our Work Page/DSC_7245.webp";
+import work6 from "./Images latest/Our Work Page/DSC_7256.webp";
+import work7 from "./Images latest/Our Work Page/IMG-20220414-WA0066.webp";
+import work8 from "./Images latest/Our Work Page/IMG-20220415-WA0000.webp";
+import work9 from "./Images latest/Our Work Page/IMG-20250224-WA0007.webp";
+import work10 from "./Images latest/Our Work Page/IMG20260608110642.webp";
+import work11 from "./Images latest/Our Work Page/IMG20260608110740.webp";
+import work12 from "./Images latest/Our Work Page/IMG20260608111147.webp";
+import work13 from "./Images latest/Our Work Page/IMG20260608155650.webp";
+import work14 from "./Images latest/Our Work Page/IMG20260608160009.webp";
+import work15 from "./Images latest/Our Work Page/IMG20260608162829.webp";
+import work16 from "./Images latest/Our Work Page/IMG20260608162854.webp";
+import work17 from "./Images latest/Our Work Page/IMG_20260608_111132137_HDR.webp";
+import work18 from "./Images latest/Our Work Page/VKP_8402.webp";
+import work19 from "./Images latest/Our Work Page/VKP_8461.webp";
+import work20 from "./Images latest/Our Work Page/VKP_8473.webp";
+import work21 from "./Images latest/Our Work Page/WhatsApp Image 2025-04-12 at 2.39.10 PM.webp";
+import work22 from "./Images latest/Our Work Page/WhatsApp Image 2026-01-06 at 7.51.59 AM (1).webp";
+import work23 from "./Images latest/Our Work Page/WhatsApp Image 2026-01-06 at 7.51.59 AM (2).webp";
+import work24 from "./Images latest/Our Work Page/WhatsApp Image 2026-01-06 at 7.51.59 AM.webp";
+import work25 from "./Images latest/Our Work Page/WhatsApp Image 2026-03-12 at 7.09.00 PM (1).webp";
+import work26 from "./Images latest/Our Work Page/WhatsApp Image 2026-03-12 at 7.09.00 PM (2).webp";
+import work27 from "./Images latest/Our Work Page/WhatsApp Image 2026-03-12 at 7.09.00 PM.webp";
+import work28 from "./Images latest/Our Work Page/WhatsApp Image 2026-03-12 at 7.09.01 PM.webp";
+import work29 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-08 at 6.03.06 PM (1).webp";
+import work30 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-08 at 6.21.32 PM.webp";
+import work31 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-16 at 6.14.57 PM (1).webp";
+import work32 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-16 at 6.14.58 PM (1).webp";
+import work33 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-16 at 6.14.58 PM.webp";
+import work34 from "./Images latest/Our Work Page/WhatsApp Image 2026-04-16 at 6.15.44 PM.webp";
+import work35 from "./Images latest/Our Work Page/WhatsApp Image 2026-08-14 at 12.36.47 PM (1).webp";
+import work36 from "./Images latest/Our Work Page/WhatsApp Image 2026-08-14 at 8.03.14 PM (1).webp";
+import work37 from "./Images latest/Our Work Page/WhatsApp Image 2026-08-14 at 8.03.14 PM.webp";
+import work38 from "./Images latest/Our Work Page/WhatsApp Image 2026-10-05 at 7.09.25 PM (1).webp";
+import work39 from "./Images latest/Our Work Page/WhatsApp Image 2026-10-05 at 7.09.25 PM.webp";
+import work40 from "./Images latest/Our Work Page/WhatsApp Image 2026-10-05 at 7.09.26 PM.webp";
+import work41 from "./Images latest/Our Work Page/WhatsApp Image 2026-10-05 at 7.09.27 PM.webp";
 
 // Export Contact Us Image
 export const contactUsImages = {

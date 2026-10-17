@@ -11,7 +11,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
-import logo from "../images/SOIL_Foundation_Logo-removebg.png";
+import logo from "../images/SOIL_Foundation_Logo-removebg.webp";
 import fallbackLogo from "../images/SOIL_Foundation_Logo.ico";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -44,7 +44,7 @@ function Footer() {
                 }}
               />
               <div>
-                <h5
+                <h3
                   style={{
                     fontFamily: "'EB Garamond', Georgia, serif",
                     fontSize: "1.4rem",
@@ -55,13 +55,13 @@ function Footer() {
                   }}
                 >
                   SOIL FOUNDATION
-                </h5>
+                </h3>
                 <small
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "0.7rem",
                     letterSpacing: "0.12em",
-                    color: "#B99A76",
+                    color: "#DFC7A7",
                     textTransform: "uppercase",
                   }}
                 >
@@ -114,18 +114,18 @@ function Footer() {
 
           {/* Column 2: Navigation Links */}
           <Col lg={2} md={6} sm={6} className="text-start">
-            <h5
+            <h3
               style={{
                 fontFamily: "'EB Garamond', Georgia, serif",
                 fontSize: "1.25rem",
-                color: "#B99A76",
+                color: "#DFC7A7",
                 fontWeight: 600,
                 marginBottom: "1.25rem",
                 letterSpacing: "0.02em",
               }}
             >
               Quick Links
-            </h5>
+            </h3>
             <ul className="list-unstyled d-flex flex-column gap-2 mb-0" style={{ fontSize: "0.9rem" }}>
               <li>
                 <HashLink
@@ -186,18 +186,18 @@ function Footer() {
 
           {/* Column 3: Contact Details */}
           <Col lg={3} md={6} sm={6} className="text-start">
-            <h5
+            <h3
               style={{
                 fontFamily: "'EB Garamond', Georgia, serif",
                 fontSize: "1.25rem",
-                color: "#B99A76",
+                color: "#DFC7A7",
                 fontWeight: 600,
                 marginBottom: "1.25rem",
                 letterSpacing: "0.02em",
               }}
             >
               Contact Offices
-            </h5>
+            </h3>
             <div className="d-flex flex-column gap-3" style={{ fontSize: "0.85rem", color: "rgba(245, 241, 232, 0.8)" }}>
               <div className="d-flex gap-2">
                 <FaMapMarkerAlt className="mt-1 flex-shrink-0" style={{ color: "#A66B4E" }} />
@@ -236,18 +236,18 @@ function Footer() {
 
           {/* Column 4: Social Connect & Engagement */}
           <Col lg={3} md={6} className="text-start">
-            <h5
+            <h3
               style={{
                 fontFamily: "'EB Garamond', Georgia, serif",
                 fontSize: "1.25rem",
-                color: "#B99A76",
+                color: "#DFC7A7",
                 fontWeight: 600,
                 marginBottom: "1.25rem",
                 letterSpacing: "0.02em",
               }}
             >
               Connect With Us
-            </h5>
+            </h3>
             <p style={{ fontSize: "0.88rem", color: "rgba(245, 241, 232, 0.8)" }}>
               Follow our grassroots stories, community developments, and environmental initiatives.
             </p>
@@ -258,6 +258,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Facebook"
+                aria-label="Facebook"
                 style={{
                   width: "40px",
                   height: "40px",
@@ -287,6 +288,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="LinkedIn"
+                aria-label="LinkedIn"
                 style={{
                   width: "40px",
                   height: "40px",
@@ -316,6 +318,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Instagram"
+                aria-label="Instagram"
                 style={{
                   width: "40px",
                   height: "40px",
@@ -345,6 +348,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Twitter"
+                aria-label="Twitter"
                 style={{
                   width: "40px",
                   height: "40px",
@@ -400,6 +404,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-decoration-underline"
+                style={{ color: "#DFC7A7" }}
               >
                 Silicon Mango
               </a>

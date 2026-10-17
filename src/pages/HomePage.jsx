@@ -29,28 +29,29 @@ import {
   home7,
   home8,
 } from "../assets/clientImages";
-import bannerImage from "../assets/WesternGhat.jpg";
-import tribalDev from "../assets/Tribal Development.jpg";
-import conservationImg from "../assets/conservation.jpg";
-import womenImg from "../assets/women.jpg";
-import organicImg from "../assets/organic.jpg";
-import eduImg from "../images/7.png";
-import waterImg from "../images/water_conservation.jpeg";
+import tribalDev from "../assets/Tribal Development.webp";
+import conservationImg from "../assets/conservation.webp";
+import womenImg from "../assets/women.webp";
+import organicImg from "../assets/organic.webp";
+import eduImg from "../images/7.webp";
+import waterImg from "../images/water_conservation.webp";
 
 // Soil Foundation Authentic Artworks from "Soil Foundation images"
-import artHarmonize from "../assets/soil_art/IMG-20250304-WA0002.jpg";
-import artNurture from "../assets/soil_art/IMG-20250304-WA0012.jpg";
-import artEmpower from "../assets/soil_art/IMG-20250304-WA0007.jpg";
-import artEducation from "../assets/soil_art/IMG-20250304-WA0001.jpg";
-import artTribal from "../assets/soil_art/IMG-20250304-WA0003.jpg";
-import artEcologyProtect from "../assets/soil_art/IMG-20250304-WA0011.jpg";
-import artSupport from "../assets/soil_art/IMG-20250304-WA0016.jpg";
-import artCommunity from "../assets/soil_art/IMG-20250304-WA0000.jpg";
-import artResilience from "../assets/soil_art/IMG-20250304-WA0017.jpg";
-import tribalBorderArt from "../assets/tribal_border_art.png";
-import tribalStripPattern from "../assets/tribal_strip_pattern.png";
+import artHarmonize from "../assets/soil_art/IMG-20250304-WA0002.webp";
+import artNurture from "../assets/soil_art/IMG-20250304-WA0012.webp";
+import artEmpower from "../assets/soil_art/IMG-20250304-WA0007.webp";
+import artEducation from "../assets/soil_art/IMG-20250304-WA0001.webp";
+import artTribal from "../assets/soil_art/IMG-20250304-WA0003.webp";
+import artEcologyProtect from "../assets/soil_art/IMG-20250304-WA0011.webp";
+import artSupport from "../assets/soil_art/IMG-20250304-WA0016.webp";
+import artCommunity from "../assets/soil_art/IMG-20250304-WA0000.webp";
+import artResilience from "../assets/soil_art/IMG-20250304-WA0017.webp";
+import tribalBorderArt from "../assets/tribal_border_art.webp";
+import tribalStripPattern from "../assets/tribal_strip_pattern.webp";
 
 import "./HomePage.css";
+
+const bannerImage = `${process.env.PUBLIC_URL}/WesternGhat.webp`;
 
 // Register GSAP ScrollTrigger Plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -121,7 +122,7 @@ function HomePage() {
           desc: "Distributing hygiene essentials and building health awareness in rural educational institutions.",
         },
         {
-          img: "/soil_art/IMG-20250304-WA0014.jpg",
+          img: "/soil_art/IMG-20250304-WA0014.webp",
           caption: "Cradling Life • Soil and Green Sprout",
           archiveTag: "SOIL Art Archive",
           badgeType: "art",
@@ -174,7 +175,7 @@ function HomePage() {
           desc: "Partnering directly with local families to protect catchment zones and biodiversity corridors.",
         },
         {
-          img: "/soil_art/IMG-20250304-WA0003.jpg",
+          img: "/soil_art/IMG-20250304-WA0003.webp",
           caption: "Indigenous Heritage & Village Harmony",
           archiveTag: "SOIL Art Archive",
           badgeType: "art",
@@ -608,6 +609,10 @@ function HomePage() {
           src={bannerImage}
           alt="Western Ghats Mountain Range"
           className="hero-fullscreen-bg"
+          fetchPriority="high"
+          decoding="async"
+          width="1920"
+          height="1080"
         />
         {/* Soft Contrast Overlay */}
         <div className="hero-fullscreen-overlay" />
@@ -719,7 +724,7 @@ function HomePage() {
                                 filterCategory: activePhoto.badgeType,
                               })
                             }
-                            aria-label="Expand image"
+                            aria-label="View Full image"
                             title="View high resolution"
                           >
                             <FaExpand size={12} />
@@ -817,6 +822,8 @@ function HomePage() {
                           <img
                             src={tribalStripPattern}
                             alt="SOIL Folk Art Border Strip"
+                            loading="lazy"
+                            decoding="async"
                             className="story-top-art-img"
                           />
                         </div>
@@ -857,6 +864,8 @@ function HomePage() {
                           <img
                             src={tribalBorderArt}
                             alt="SOIL Folk Art Border"
+                            loading="lazy"
+                            decoding="async"
                             className="story-bottom-art-img"
                           />
                         </div>
@@ -1188,6 +1197,8 @@ function HomePage() {
                       <img
                         src={pillar.image}
                         alt={pillar.title}
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     {/* Authentic Community Art Badge from Soil Foundation images */}
@@ -1205,6 +1216,8 @@ function HomePage() {
                       <img
                         src={pillar.artImage}
                         alt={pillar.artCaption}
+                        loading="lazy"
+                        decoding="async"
                         style={{
                           width: "70px",
                           height: "70px",
@@ -1225,7 +1238,7 @@ function HomePage() {
                         </div>
                         <small
                           style={{
-                            color: "#A66B4E",
+                            color: "#824729",
                             fontFamily: "'Inter', sans-serif",
                             fontSize: "0.72rem",
                             textTransform: "uppercase",
@@ -1256,7 +1269,7 @@ function HomePage() {
                         fontFamily: "'EB Garamond', Georgia, serif",
                         fontStyle: "italic",
                         fontSize: "1.15rem",
-                        color: "#A66B4E",
+                        color: "#824729",
                         marginBottom: "1.2rem",
                       }}
                     >
@@ -1287,7 +1300,7 @@ function HomePage() {
                             style={{
                               fontFamily: "'EB Garamond', Georgia, serif",
                               fontStyle: "italic",
-                              color: "#A66B4E",
+                              color: "#824729",
                               fontSize: "0.95rem",
                               marginBottom: "0.4rem",
                             }}
@@ -1336,7 +1349,7 @@ function HomePage() {
                 fontFamily: "'EB Garamond', Georgia, serif",
                 fontSize: "clamp(1.25rem, 2vw, 1.6rem)",
                 fontStyle: "italic",
-                color: "#A66B4E",
+                color: "#824729",
                 maxWidth: "750px",
                 margin: "0 auto 2rem",
               }}
@@ -1456,7 +1469,7 @@ function HomePage() {
                   onClick={() => setActiveModalImg(item)}
                   role="button"
                   tabIndex={0}
-                  aria-label={`View ${item.title}`}
+                  aria-label={item.title}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                       setActiveModalImg(item);
@@ -1572,9 +1585,9 @@ function HomePage() {
                   height: "100%",
                 }}
               >
-                <h5 style={{ fontFamily: "'EB Garamond'", color: "#344B38", fontSize: "1.3rem" }}>
+                <h3 style={{ fontFamily: "'EB Garamond'", color: "#344B38", fontSize: "1.3rem", fontWeight: 600 }}>
                   ISRA
-                </h5>
+                </h3>
                 <small style={{ color: "#49483D", fontSize: "0.82rem" }}>
                   Institute of Social Responsibility & Accountability
                 </small>
@@ -1591,9 +1604,9 @@ function HomePage() {
                   height: "100%",
                 }}
               >
-                <h5 style={{ fontFamily: "'EB Garamond'", color: "#344B38", fontSize: "1.3rem" }}>
+                <h3 style={{ fontFamily: "'EB Garamond'", color: "#344B38", fontSize: "1.3rem", fontWeight: 600 }}>
                   Quality Council of India
-                </h5>
+                </h3>
                 <small style={{ color: "#49483D", fontSize: "0.82rem" }}>
                   QCI & Sarpanch Samvad National Platform
                 </small>
@@ -1610,9 +1623,9 @@ function HomePage() {
                   height: "100%",
                 }}
               >
-                <h5 style={{ fontFamily: "'EB Garamond'", color: "#344B38", fontSize: "1.3rem" }}>
+                <h3 style={{ fontFamily: "'EB Garamond'", color: "#344B38", fontSize: "1.3rem", fontWeight: 600 }}>
                   Tata-Dhan Academy
-                </h5>
+                </h3>
                 <small style={{ color: "#49483D", fontSize: "0.82rem" }}>
                   Alumni Fellowship & Knowledge Network
                 </small>
@@ -1629,9 +1642,9 @@ function HomePage() {
                   height: "100%",
                 }}
               >
-                <h5 style={{ fontFamily: "'EB Garamond'", color: "#344B38", fontSize: "1.3rem" }}>
+                <h3 style={{ fontFamily: "'EB Garamond'", color: "#344B38", fontSize: "1.3rem", fontWeight: 600 }}>
                   Karnataka SHG Federations
-                </h5>
+                </h3>
                 <small style={{ color: "#49483D", fontSize: "0.82rem" }}>
                   Grassroots Women Entrepreneur Collectives
                 </small>
@@ -1658,9 +1671,9 @@ function HomePage() {
               <Col lg={3} md={6} className="stagger-card-item">
                 <div className="resource-card">
                   <div>
-                    <h5 style={{ color: "#344B38", fontFamily: "'EB Garamond'", fontSize: "1.3rem" }}>
+                    <h4 style={{ color: "#344B38", fontFamily: "'EB Garamond'", fontSize: "1.3rem", fontWeight: 600 }}>
                       Annual Reports
-                    </h5>
+                    </h4>
                     <p style={{ fontSize: "0.88rem", color: "#49483D" }}>
                       Comprehensive annual overviews detailing program milestones,
                       beneficiary reach, and audited accounts.
@@ -1676,9 +1689,9 @@ function HomePage() {
               <Col lg={3} md={6} className="stagger-card-item">
                 <div className="resource-card">
                   <div>
-                    <h5 style={{ color: "#344B38", fontFamily: "'EB Garamond'", fontSize: "1.3rem" }}>
+                    <h4 style={{ color: "#344B38", fontFamily: "'EB Garamond'", fontSize: "1.3rem", fontWeight: 600 }}>
                       Financial Reports
-                    </h5>
+                    </h4>
                     <p style={{ fontSize: "0.88rem", color: "#49483D" }}>
                       Audited balance sheets, 80G/12A regulatory filings, and CSR
                       utilization statements.
@@ -1694,9 +1707,9 @@ function HomePage() {
               <Col lg={3} md={6} className="stagger-card-item">
                 <div className="resource-card">
                   <div>
-                    <h5 style={{ color: "#344B38", fontFamily: "'EB Garamond'", fontSize: "1.3rem" }}>
+                    <h4 style={{ color: "#344B38", fontFamily: "'EB Garamond'", fontSize: "1.3rem", fontWeight: 600 }}>
                       Media Coverage
-                    </h5>
+                    </h4>
                     <p style={{ fontSize: "0.88rem", color: "#49483D" }}>
                       Press publications, Western Ghats features, and regional
                       news stories showcasing SOIL interventions.
@@ -1712,9 +1725,9 @@ function HomePage() {
               <Col lg={3} md={6} className="stagger-card-item">
                 <div className="resource-card">
                   <div>
-                    <h5 style={{ color: "#344B38", fontFamily: "'EB Garamond'", fontSize: "1.3rem" }}>
+                    <h4 style={{ color: "#344B38", fontFamily: "'EB Garamond'", fontSize: "1.3rem", fontWeight: 600 }}>
                       Social Media
-                    </h5>
+                    </h4>
                     <p style={{ fontSize: "0.88rem", color: "#49483D" }}>
                       Real-time stories, nursery updates, and women self-help
                       initiatives documented directly from the field.
@@ -1758,6 +1771,8 @@ function HomePage() {
             <img
               src={artSupport}
               alt="Art of community solidarity"
+              loading="lazy"
+              decoding="async"
               className="support-bg-art"
             />
             <Row className="position-relative" style={{ zIndex: 2 }}>
